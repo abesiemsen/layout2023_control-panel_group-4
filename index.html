@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Panel</title>
+    <link rel="shortcut icon" href="assets/car.png" />
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<header class="col-12">
+    <div class="bg-dark"></div>
+</header>
+
+<body class="min-vh-100">
+    <main class="z-0">
+        <div class="fluid-container col-12 m-0 h-100">
+
+            <!-- nav-bar -->
+            <!-- <div class="row w-100 vh-100"> -->
+
+            <!-- header/sidebar. left hand side -->
+            <!-- <div class="col-4">
+                    <div class="z-3 h-100 d-flex flex-column flex-shrink-0 p-3 text-white bg-dark">
+
+                        <hr>
+                        <ul class="nav nav-pills d-flex flex-column align-item-center justify-content-center mb-auto">
+
+                            <li class="d-flex align-item-center justify-content-center">
+                                <button type="button" class="btn btn-primary col-8 mb-3">
+                                    <h4 class="">Create Reservation</h4>
+                                </button>
+
+                            </li>
+                            <li class="d-flex align-item-center justify-content-center">
+                                <button type="button" class="btn btn-light col-8 mb-3">
+                                    <h4 class=" ">Look-up Reservation</h4>
+                                </button>
+                            </li>
+                        </ul>
+                        <hr>
+                        <div class="dropdown">
+                            <a><strong>Log-in</strong></a>
+                            <p class="text-muted">Designed by: Paige Steuber, Jeffrey Wang, Flora Wu</p>
+                        </div>
+
+                    </div>
+                </div> -->
+
+            <!-- right hand side -->
+            <div class="col-12">
+                <h1>Reservation Look-UP</h1>
+                <!-- first block content -->
+                <div class="bg-primary h-auto col-12 rounded mt-3">
+                    <form class="p-3 h-50">
+                        <!-- name -->
+                        <div class="form-group">
+                            <label class="text-white fw-bold">Customer Name</label>
+                            <div class="d-flex">
+                                <input type="text" class="form-control mr-2 w-50" id="inputFirstName"
+                                    aria-describedby="emailHelp" placeholder="Enter first name">
+                                <input type="text" class="form-control ml-2 w-50" id="inputLastName"
+                                    aria-describedby="emailHelp" placeholder="Enter last name">
+                            </div>
+                        </div>
+                        <!-- id & confirmation number -->
+                        <div class="form-group">
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex flex-column align-item-start mr-2 w-50">
+                                    <label class="text-white fw-bold">Email</label>
+                                    <input type="email" class="form-control" id="inputFirstName"
+                                        aria-describedby="emailHelp" placeholder="Enter email address">
+                                </div>
+                                <div class="d-flex flex-column align-item-start  ml-2 w-50">
+                                    <label class="text-white fw-bold">Phone number</label>
+                                    <input type="tel" class="form-control" id="inputFirstName"
+                                        aria-describedby="emailHelp" placeholder="(xxx)-xxx-xxxx">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- id & confirmation number -->
+                        <div class="form-group">
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex flex-column align-item-start mr-2 w-50">
+                                    <label class="text-white fw-bold">User ID</label>
+                                    <input type="text" class="form-control" id="inputFirstName"
+                                        aria-describedby="emailHelp" placeholder="Enter user id">
+                                </div>
+                                <div class="d-flex flex-column align-item-start ml-2 w-50">
+                                    <label class="text-white fw-bold">Confirmation number</label>
+                                    <input type="text" class="form-control" id="inputFirstName"
+                                        aria-describedby="emailHelp" placeholder="Enter confirmation number">
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-secondary">Submit</button>
+                    </form>
+                </div>
+
+                <!-- second block content -->
+                <div class="bg-primary h-auto col-12 rounded mt-3">
+                    <form class="p-3 h-50">
+                        <!-- name -->
+                        <div class="form-group">
+                            <label class="text-white fw-bold">Customer Name</label>
+                            <div class="d-flex">
+                                <input type="text" class="form-control mr-2 w-50" id="inputFirstName"
+                                    aria-describedby="emailHelp" placeholder="Enter first name">
+                                <input type="text" class="form-control ml-2 w-50" id="inputLastName"
+                                    aria-describedby="emailHelp" placeholder="Enter last name">
+                            </div>
+                        </div>
+                        <!-- id & confirmation number -->
+                        <div class="form-group">
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex flex-column align-item-start mr-2 w-50">
+                                    <label class="text-white fw-bold">Email</label>
+                                    <input type="email" class="form-control" id="inputFirstName"
+                                        aria-describedby="emailHelp" placeholder="Enter email address">
+                                </div>
+                                <div class="d-flex flex-column align-item-start  ml-2 w-50">
+                                    <label class="text-white fw-bold">Phone number</label>
+                                    <input type="tel" class="form-control" id="inputFirstName"
+                                        aria-describedby="emailHelp" placeholder="(xxx)-xxx-xxxx">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- id & confirmation number -->
+                        <div class="form-group">
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex flex-column align-item-start mr-2 w-50">
+                                    <label class="text-white fw-bold">User ID</label>
+                                    <input type="text" class="form-control" id="inputFirstName"
+                                        aria-describedby="emailHelp" placeholder="Enter user id">
+                                </div>
+                                <div class="d-flex flex-column align-item-start ml-2 w-50">
+                                    <label class="text-white fw-bold">Confirmation number</label>
+                                    <input type="text" class="form-control" id="inputFirstName"
+                                        aria-describedby="emailHelp" placeholder="Enter confirmation number">
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-secondary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+
+
+</html>
