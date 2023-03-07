@@ -1,0 +1,12 @@
+.card:hover{
+   cursor: pointer !important;
+}
+.extra_info{
+    display: none;
+}
+
+.expanded{
+
+    display: block;
+
+}
