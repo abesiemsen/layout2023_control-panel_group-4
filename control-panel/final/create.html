@@ -49,17 +49,13 @@
             </div>
         </div>
     </nav>
-
-    <main class="d-flex flex-column align-items-center col-12">
-        <div class="fluid-container col-11 h-100">
-
-            <div class="col-12  mt-3 ">
-
-                <!-- first block content -->
-                <div class="h-auto col-12 rounded mt-3" style="background-color: #ffffff;">
-
+    <div class="container p-0 ">
+        <div class="row gx-4 gy-2 mt-3">
+            <!-- customer info ----------------------------------------------------------- -->
+            <div class="col-6">
+                <div style="background-color: #ffffff;">
                     <form class="p-3 h-50">
-                        <h1>Create Reservation</h1>
+                        <h4>Customer Information</h4>
                         <!-- name -->
                         <div class="form-group">
                             <label class="text-gray fw-bold">Customer Name</label>
@@ -102,120 +98,219 @@
                                 </div>
                             </div>
                         </div>
+                    </form>
+                </div>
 
-                        <!-- duration -->
-                        <div class="form-group">
-                            <div class="d-flex justify-content-between">
-                                <div class="d-flex flex-column align-item-start mr-2 w-50">
-                                    <label class="text-gray fw-bold">Depart date</label>
-                                    <input type="datetime-local" class="form-control" id="inputFirstName"
-                                        aria-describedby="emailHelp">
+                <div class="mt-3 p-3" style="background-color: #ffffff;">
+                    <h4>Payment Information</h4>
+                    <h5>Card Information</h5>
+                    <div class="form-group">
+                        <div class="d-flex flex-column align-item-start mr-2 w-50">
+                            <label for="ccn">Credit Card Number:</label>
+                            <input id="ccn" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}"
+                                autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx">
+                        </div>
+                    </div>
+
+                    <!-- Billing address -->
+                    <h5 class="mt-3">Billing Address</h5>
+
+                    <div class="form-group">
+                        <div class="d-flex flex-column align-item-start mr-2 w-100">
+
+                            <!-- Address Line 1 -->
+                            <label for="Address Line 1">Address Line 1:</label>
+                            <input type="text" class="form-control" id="inputAddressLine_billing" aria-describedby="emailHelp"
+                                placeholder="Address Line 1">
+
+                            <!-- Address Line 2 -->
+                            <label for="Address Line 2">Address Line 2:</label>
+                            <input type="text" class="form-control" id="inputAddressLineTwo_billing" aria-describedby="emailHelp"
+                                placeholder="Address Line 2">
+
+                            <div class="form-group">
+                                <div class="d-flex justify-content-between">
+
+                                    <div class="d-flex flex-column align-item-start  ml-2 w-50">
+
+                                        <!-- City -->
+                                        <label for="City">City:</label>
+                                        <input type="text" class="form-control" id="inputCity_billing"
+                                            aria-describedby="emailHelp" placeholder="City">
+
+                                    </div>
+                                    <div class="d-flex flex-column align-item-start mr-2 w-50">
+                                        <!-- State -->
+                                        <label for="State">State / Provence:</label>
+                                        <input type="text" class="form-control" id="inputState_billing"
+                                            aria-describedby="emailHelp" placeholder="State/Provence">
+
+                                    </div>
+                                    
                                 </div>
-                                <div class="d-flex flex-column align-item-start ml-2 w-50">
-                                    <label class="text-gray fw-bold">Return date</label>
-                                    <input type="datetime-local" class="form-control" id="inputFirstName"
-                                        aria-describedby="emailHelp">
+                            </div>
+
+
+                            <!-- Zip -->
+                            <label for="Zip">Zip / Postal Code:</label>
+                            <input type="text" class="form-control" id="inputFirstName" aria-describedby="emailHelp"
+                                placeholder="Zip">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- stops --------------------------------------------------------------------------- -->
+            <div class="col-6">
+                <div class="p-3" style="background-color: #ffffff;">
+
+
+                    <h4>Route</h4>
+                    <!-- round-trip or one way-------------- -->
+                    <div class="btn-group col-4" role="group" aria-label="Basic radio toggle button group">
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btnradio1">Round-Trip</label>
+
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btnradio2">One-Way</label>
+                    </div>
+
+                    <div>
+                        <form>
+                            <!-- duration -->
+                            <div class="form-group">
+                                <div class="d-flex justify-content-between">
+                                    <div class="d-flex flex-column align-item-start mr-2 w-50">
+                                        <label class="text-gray fw-bold">Depart date</label>
+                                        <input type="datetime-local" class="form-control" id="inputFirstName"
+                                            aria-describedby="emailHelp">
+                                    </div>
+                                    <div class="d-flex flex-column align-item-start ml-2 w-50">
+                                        <label class="text-gray fw-bold">Return date</label>
+                                        <input type="datetime-local" class="form-control" id="inputFirstName"
+                                            aria-describedby="emailHelp">
+                                    </div>
                                 </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Add stop -->
+                    <div>
+                        <div class="d-flex flex-column align-item-start mr-2 mt-3 w-100">
+                            <label class="text-gray fw-bold">Add Stop</label>
+                            <div class="d-flex flex-row justify-content-between align-items-center">
+                                <input type="text" class="form-control" id="inputFirstName" aria-describedby="emailHelp"
+                                    placeholder="City">
+                                <input type="text" class="form-control" id="inputFirstName" aria-describedby="emailHelp"
+                                    placeholder="State">
+                                <i class="fa-solid fa-circle-plus mx-3" style="font-size: 1.8rem"></i>
                             </div>
                         </div>
-
-                        <div class="form-group">
-                            <div class="d-flex flex-column align-item-start mr-2 w-50">
-                                <label for="ccn">Credit Card Number:</label>
-                                <input id="ccn" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}"
-                                    autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx">
-                            </div>
-                        </div>
+                    </div>
 
 
-                        <!-- 
-                            Add stops area
-                         -->
-                        <div class="fluid-container col-12 mt-3 h-100 rounded " style="background-color: #ffffff;">
-                            <!-- round trip or one way  -->
-                            <div class="btn-group col-4" role="group" aria-label="Basic radio toggle button group">
-                                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
-                                <label class="btn btn-outline-primary" for="btnradio1">Round-Trip</label>
 
-                                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-                                <label class="btn btn-outline-primary" for="btnradio2">One-Way</label>
-                            </div>
-
-                            <!-- Add stop -->
-                            <div>
-                                <div class="d-flex flex-column align-item-start mr-2 mt-3 w-100">
-                                    <label class="text-gray fw-bold">Add Stop</label>
+                    <!-- draggable list of stops -->
+                    <div class="d-flex mt-3">
+                        <ul class="list-group col-10" id="stopList">
+                            <li class="list-group-item">
+                                <div class="d-flex flex-column align-item-start mr-2 w-100">
+                                    <label class="text-gray fw-bold">Start at</label>
                                     <div class="d-flex flex-row justify-content-between align-items-center">
                                         <input type="text" class="form-control" id="inputFirstName"
                                             aria-describedby="emailHelp" placeholder="City">
                                         <input type="text" class="form-control" id="inputFirstName"
                                             aria-describedby="emailHelp" placeholder="State">
-                                        <i class="fa-solid fa-circle-plus mx-3" style="font-size: 1.8rem"></i>
+                                        <!-- <i class="fa-solid fa-circle-plus" style="color: #94e3fe; font-size: 1.8rem;"></i> -->
                                     </div>
                                 </div>
-                            </div>
-
-                            <br>
-                            <!-- draggable list of stops -->
-                            <div class="d-flex mt-3">
-                                <ul class="list-group col-10" id="stopList">
-                                    <li class="list-group-item">
-                                        <div class="d-flex flex-column align-item-start mr-2 w-100">
-                                            <label class="text-gray fw-bold">Start at</label>
-                                            <div class="d-flex flex-row justify-content-between align-items-center">
-                                                <input type="text" class="form-control" id="inputFirstName"
-                                                    aria-describedby="emailHelp" placeholder="City">
-                                                <input type="text" class="form-control" id="inputFirstName"
-                                                    aria-describedby="emailHelp" placeholder="State">
-                                                <!-- <i class="fa-solid fa-circle-plus" style="color: #94e3fe; font-size: 1.8rem;"></i> -->
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <div class="d-flex flex-column align-item-start mr-2 w-100">
-                                            <label class="text-gray fw-bold">stop 1</label>
-                                            <div class="d-flex flex-row">
-                                                <input type="text" class="form-control" id="inputFirstName"
-                                                    aria-describedby="emailHelp" placeholder="City">
-                                                <input type="text" class="form-control" id="inputFirstName"
-                                                    aria-describedby="emailHelp" placeholder="State">
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <div class="d-flex flex-column align-item-start mr-2 w-100">
-                                            <label class="text-gray fw-bold">End at</label>
-                                            <div class="d-flex flex-row">
-                                                <input type="text" class="form-control" id="inputFirstName"
-                                                    aria-describedby="emailHelp" placeholder="City">
-                                                <input type="text" class="form-control" id="inputFirstName"
-                                                    aria-describedby="emailHelp" placeholder="State">
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-
-                                <div class="col-2 border d-flex flex-column justify-content-between align-items-center">
-                                    <p>1/2/2023</p>
-                                    <p>1/2/2023</p>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="d-flex flex-column align-item-start mr-2 w-100">
+                                    <label class="text-gray fw-bold">stop 1</label>
+                                    <div class="d-flex flex-row">
+                                        <input type="text" class="form-control" id="inputFirstName"
+                                            aria-describedby="emailHelp" placeholder="City">
+                                        <input type="text" class="form-control" id="inputFirstName"
+                                            aria-describedby="emailHelp" placeholder="State">
+                                    </div>
                                 </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="d-flex flex-column align-item-start mr-2 w-100">
+                                    <label class="text-gray fw-bold">End at</label>
+                                    <div class="d-flex flex-row">
+                                        <input type="text" class="form-control" id="inputFirstName"
+                                            aria-describedby="emailHelp" placeholder="City">
+                                        <input type="text" class="form-control" id="inputFirstName"
+                                            aria-describedby="emailHelp" placeholder="State">
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
 
-                            </div>
-
+                        <div class="col-2 border d-flex flex-column justify-content-between align-items-center">
+                            <p>1/2/2023</p>
+                            <p>1/2/2023</p>
                         </div>
 
-                        <!-- Create reservation button  -->
-                        <div class="d-flex flex-column align-items-end">
-                            <button type="submit" class="btn btn-secondary mt-3"
-                                style="background-color: #1472ff;">Create</button>
-                        </div>
+                    </div>
+                </div>
 
-                    </form>
+            </div>
+
+        </div>
+
+        <!-- vehicle--------------------------------------------------------------------------------------------- -->
+        <div class="row ">
+            <div class="col-12">
+                <div class="mt-3 p-3" style="background-color: #ffffff;">
+
+
+                    <h4>Vehicle Details</h4>
+                    <!-- TODO: forms: number of seats, brand preference, gas or electric, etc etc  -->
+
+                    <div class="form-group">
+                        <div class="d-flex flex-column align-item-start mr-2 w-50">
+                            <label for="ccn">Credit Card Number:</label>
+                            <input id="ccn" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}"
+                                autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx">
+                        </div>
+                    </div>
+                    <!-- TODo: list of available vehicles based on preferences -->
+                </div>
+            </div>
+
+            <!-- Create reservation button  -->
+            <div class="d-flex flex-column align-items-end">
+                <button type="submit" class="btn btn-secondary mt-3" style="background-color: #1472ff;">Create</button>
+            </div>
+
+        </div>
+
+        <!-- Detaisl------------------------------------------------ -->
+        <div class="row ">
+            <!-- TODO: make a mock up of what a details page might look like after the client has entered as
+                    much information as possible. A collected representation of the resercation Buttoms for 
+                    sharing (email), printing, and saving 
+                    Also cost expectancy
+                 -->
+            <div class="col-12">
+                <div class="mt-3 p-3" style="background-color: #ffffff;">
+                    <h4>Details</h4>
+                    <div>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m58!1m12!1m3!1d456857.94678149617!2d-91.01067722802483!3d38.30745579443429!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m43!3e1!4m5!1s0x87d8caa963c50cdf%3A0x5a6089ec9e560c58!2sSam%20Fox%20School%20of%20Design%20and%20Visual%20Arts%2C%20Brookings%20Drive%2C%20St.%20Louis%2C%20MO!3m2!1d38.6458857!2d-90.3031422!4m5!1s0x87dae654c3139c31%3A0xb48346fe60abadc4!2sUranus%20Fudge%20Factory%20And%20General%20Store%2C%2014400%20State%20Hwy%20Z%2C%20St%20Robert%2C%20MO%2065584!3m2!1d37.8287218!2d-92.1053864!4m5!1s0x87d94e8133c753d7%3A0xdd2507b5317e2ed5!2sWashington!3m2!1d38.558107199999995!2d-91.01208779999999!4m5!1s0x87dbb17645e4f8c1%3A0x244a2e6e693960da!2sSewell%20Cemetery%2C%20St%20James%2C%20MO%2065559!3m2!1d38.0658567!2d-91.6358497!4m5!1s0x87da577c68ac6af3%3A0xd9b9e078b425841f!2sHaven%20Hollow%20RV%20Park%2C%2017782%20Co%20Rd%205310%2C%20Rolla%2C%20MO%2065401!3m2!1d37.8386134!2d-91.77388479999999!4m5!1s0x87db781a794327b9%3A0x8f51c9894544abf2!2sLinn%2C%20MO%2065051!3m2!1d38.4858749!2d-91.85045149999999!4m5!1s0x87da4011b07d9695%3A0x9f48814ab4439a44!2sSalem%2C%20MO%2065560!3m2!1d37.6455993!2d-91.53598079999999!5e0!3m2!1sen!2sus!4v1679530807578!5m2!1sen!2sus"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
                 </div>
             </div>
         </div>
-    </main>
-
+    </div>
     <footer class="bg-light text-center text-lg-start">
         <!-- Copyright -->
         <div class="text-center p-3 mt-5" style="background-color: rgba(0, 0, 0, 0.2);">
