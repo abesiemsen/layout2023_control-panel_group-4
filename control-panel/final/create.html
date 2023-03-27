@@ -120,13 +120,13 @@
 
                             <!-- Address Line 1 -->
                             <label for="Address Line 1">Address Line 1:</label>
-                            <input type="text" class="form-control" id="inputAddressLine_billing" aria-describedby="emailHelp"
-                                placeholder="Address Line 1">
+                            <input type="text" class="form-control" id="inputAddressLine_billing"
+                                aria-describedby="emailHelp" placeholder="Address Line 1">
 
                             <!-- Address Line 2 -->
                             <label for="Address Line 2">Address Line 2:</label>
-                            <input type="text" class="form-control" id="inputAddressLineTwo_billing" aria-describedby="emailHelp"
-                                placeholder="Address Line 2">
+                            <input type="text" class="form-control" id="inputAddressLineTwo_billing"
+                                aria-describedby="emailHelp" placeholder="Address Line 2">
 
                             <div class="form-group">
                                 <div class="d-flex justify-content-between">
@@ -146,7 +146,7 @@
                                             aria-describedby="emailHelp" placeholder="State/Provence">
 
                                     </div>
-                                    
+
                                 </div>
                             </div>
 
@@ -270,15 +270,76 @@
 
 
                     <h4>Vehicle Details</h4>
-                    <!-- TODO: forms: number of seats, brand preference, gas or electric, etc etc  -->
-
                     <div class="form-group">
-                        <div class="d-flex flex-column align-item-start mr-2 w-50">
-                            <label for="ccn">Credit Card Number:</label>
-                            <input id="ccn" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}"
-                                autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx">
+                        <div class="d-flex flex-row align-item-start mr-2 col-6">
+                           
+
+                            <div class="form-outline">
+                                <label class="form-label" for="typeNumber">Number of seats</label>
+                                <input type="number" id="typeNumber" class="form-control"  placeholder="1"/>
+                              
+                            </div>
                         </div>
                     </div>
+                    <!-- TODO: forms: number of seats, brand preference, gas or electric, etc etc  -->
+                    <h5>Available Now</h5>
+                    <div class="col d-flex flex-row justify-content-between">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left mt-5" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                          </svg>
+
+                        <div class="p-2 ms-1 rounded float-left" style="box-shadow: #b5b5b5 0px 0px 8px; width:
+                        22%">
+                            <img src="assets/car.png" alt="car" style=" width: 100%">
+                            <p class="fs-5 fw-bold  mb-1 mt-0 ">Car-Type</p>
+                            <p class=" fs-6 mb-0 mt-0 ">Gas Milage:</p>
+                            <p class=" mb-1 mt-0 ">License Plate #:</p>
+                            <i class="fa-solid fa-person"></i>
+                            <i class="fa-solid fa-person"></i>
+                            <i class="fa-solid fa-person"></i>
+                            <i class="fa-solid fa-person"></i>
+                        </div>
+                        <div class="p-2 ms-1 rounded float-left" style="box-shadow: #b5b5b5 0px 0px 8px; width:
+                        22%">
+                            <img src="assets/car.png" alt="car" style=" width: 100%">
+                            <p class="fs-5 fw-bold  mb-1 mt-0 ">Car-Type</p>
+                            <p class=" fs-6 mb-0 mt-0 ">Gas Milage:</p>
+                            <p class=" mb-1 mt-0 ">License Plate #:</p>
+                            <i class="fa-solid fa-person"></i>
+                            <i class="fa-solid fa-person"></i>
+                            <i class="fa-solid fa-person"></i>
+                            <i class="fa-solid fa-person"></i>
+                        </div>
+                        <div class="p-2 ms-1 rounded float-left" style="box-shadow: #b5b5b5 0px 0px 8px; width:
+                        22%">
+                            <img src="assets/car.png" alt="car" style=" width: 100%">
+                            <p class="fs-5 fw-bold  mb-1 mt-0 ">Car-Type</p>
+                            <p class=" fs-6 mb-0 mt-0 ">Gas Milage:</p>
+                            <p class=" mb-1 mt-0 ">License Plate #:</p>
+                            <i class="fa-solid fa-person"></i>
+                            <i class="fa-solid fa-person"></i>
+                           
+                        </div>
+                        <div class="p-2 ms-1 rounded float-left" style="box-shadow: #b5b5b5 0px 0px 8px; width:
+                        22%">
+                            <img src="assets/car.png" alt="car" style=" width: 100%">
+                            <p class="fs-5 fw-bold  mb-1 mt-0 ">Car-Type</p>
+                            <p class=" fs-6 mb-0 mt-0 ">Gas Milage:</p>
+                            <p class=" mb-1 mt-0 ">License Plate #:</p>
+                            <i class="fa-solid fa-person"></i>
+                            <i class="fa-solid fa-person"></i>
+                            <i class="fa-solid fa-person"></i>
+                            <i class="fa-solid fa-person"></i>
+                            <i class="fa-solid fa-person"></i>
+                            <i class="fa-solid fa-person"></i>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="mt-5 bi bi-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                          </svg>
+
+
+                    </div>
+                    
                     <!-- TODo: list of available vehicles based on preferences -->
                 </div>
             </div>
@@ -324,35 +385,3 @@
 <script src="script.js"></script>
 
 </html>
-
-<!-- stops -->
-<!-- <div class="form-group" aria-dropeffect="move">
-                            <div class="d-flex flex-column justify-content-between">
-                                <div class="d-flex flex-column align-item-start mr-2 w-100">
-                                    <label class="text-gray fw-bold">Depart date</label>
-                                    <input type="text" class="form-control" id="inputFirstName"
-                                        aria-describedby="emailHelp">
-                                </div>
-                                <div class="d-flex flex-column align-item-start ml-2 w-100">
-                                    <label class="text-gray fw-bold">Return date</label>
-                                    <input type="text" class="form-control" id="inputFirstName"
-                                        aria-describedby="emailHelp">
-                                </div>
-                                <div class="d-flex flex-column align-item-start ml-2 w-100">
-                                    <label class="text-gray fw-bold">Return date</label>
-                                    <input type="text" class="form-control" id="inputFirstName"
-                                        aria-describedby="emailHelp">
-                                </div>
-                            </div>
-                        </div> -->
-
-<!-- <div class="d-flex flex-column align-item-start mr-2 w-100">
-                            <label class="text-gray fw-bold">Location Input</label>
-                            <div class="d-flex flex-row">
-                                <input type="text" class="form-control" id="inputFirstName" aria-describedby="emailHelp"
-                                    placeholder="City">
-                                <input type="text" class="form-control" id="inputFirstName" aria-describedby="emailHelp"
-                                    placeholder="State">
-                            </div>
-                        </div>
-                        <br> -->
