@@ -1,5 +1,20 @@
 .card:hover {
     cursor: pointer !important;
+    background-color: #ccc !important;
+}
+
+.card.selected {
+    background-color: #316cf4 !important;
+}
+
+.card.selected>.card-body>* {
+    color: #fff !important;
+    font-weight: 300;
+}
+
+.card.selected>.card-body> :first-child {
+    color: #fff !important;
+    font-weight: 500;
 }
 
 .extra_info {
@@ -40,11 +55,13 @@
 }
 
 .divider {
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
+
 .divider hr {
     display: flex;
     flex-direction: row;
@@ -56,11 +73,91 @@
     /* set color and thickness for divider line */
     margin: 0;
 }
-.divider h6 {
+
+.divider h5 {
+    color: #aaa;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     white-space: nowrap;
     margin: 0 10px;
+}
+
+.leader-line-path {
+    position: absolute;
+}
+
+#third-block {
+    height: 100%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    /* For Firefox */
+    -ms-overflow-style: none;
+    /* For Internet Explorer and Edge */
+}
+
+#third-block ::-webkit-scrollbar {
+    display: none;
+    /* For Webkit browsers (Chrome, Safari) */
+}
+
+.credit-card {
+    width: 100%;
+    min-height: 230px;
+    border: none;
+    background: linear-gradient(135deg, #bdc3c7, #ecf0f1);
+    border-radius: 12px;
+    padding: 20px;
+    position: relative;
+}
+
+.credit-card-brand {
+    font-size: 2rem;
+    color: #333;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.credit-card-number {
+    color: #333;
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: 80px;
+    left: 20px;
+    letter-spacing: 4px;
+    white-space: nowrap;
+}
+
+.credit-card-holder {
+    color: #333;
+    font-size: 1.1rem;
+    position: absolute;
+    bottom: 45px;
+    left: 20px;
+}
+
+.credit-card-expiry {
+    color: #333;
+    font-size: 1.1rem;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.arrow-left {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #ccc;
+}
+
+.arrow-right {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid #ccc;
 }

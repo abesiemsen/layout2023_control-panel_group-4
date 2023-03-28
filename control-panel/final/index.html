@@ -58,316 +58,325 @@
 
                 <!-- ========== SEARCH ========== -->
                 <!-- first block content -->
-                <div class="p-3 me-3 d-flex flex-column justify-content-between"
+                <div class="p-3 me-3 d-flex flex-column justify-content-between align-items-center"
                     style="border-radius: 20px; height: 100%; width: 33%; background-color: #ffff;">
-                    <div>
-                        <h3>Search</h3>
-                        <p class="text-secondary">*Enter as much information as the customer can provide</p>
-                    </div>
-                    <div class="col-12 d-flex justify-content-center">
-                        <form class="h-100 col-11 mb-5" style="display:flex;" id="form1">
-                            <div class="form-group col-12">
-                                <div class="d-flex flex-column justify-content-between">
-                                    <div class="d-flex flex-column align-item-start w-100">
-                                        <label class="ms-2 text-gray" style="font-weight:500;">Reservation
-                                            number</label>
-                                        <input type="text" class="form-control rounded-pill"
-                                            aria-describedby="emailHelp" placeholder="14 digit confirmation number"
-                                            style="height:50px;">
-                                    </div>
-                                    <div class="mt-3 d-flex flex-column align-item-start w-100">
-                                        <label class="ms-2 text-gray" style="font-weight:500;">User ID</label>
-                                        <input type="text" class="form-control rounded-pill"
-                                            aria-describedby="emailHelp" placeholder="9 digit user id"
-                                            style="height:50px;">
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                        <form class="h-100 col-11 mb-5" style="display:none;" id="form2">
-                            <div class="form-group col-12">
-                                <div class="mt-0">
-                                    <div class="form-group mt-3">
-                                        <div class="d-flex flex-column align-item-start mr-2 w-100">
-                                            <label class="ms-2 text-gray" style="font-weight:500;">Customer Name</label>
-                                            <div class="d-flex justify-content-between gap-0">
-                                                <input type="text" class="form-control" id="inputFirstName"
-                                                    aria-describedby="emailHelp" placeholder="first name"
-                                                    style="border-radius: 100px 0 0 100px; width: 50%; height:50px;">
-                                                <input type="text" class="form-control" id="inputFirstName"
-                                                    aria-describedby="emailHelp" placeholder="last name"
-                                                    style="border-radius: 0 100px 100px 0; width: 50%; height:50px;">
-                                            </div>
-                                        </div>
-                                        <div class="mt-3 d-flex flex-column align-item-start mr-2 w-100">
-                                            <label class="ms-2 text-gray" style="font-weight:500;">Email</label>
-                                            <input type="email" class="form-control rounded-pill"
-                                                aria-describedby="emailHelp" placeholder="customer@mail.com"
-                                                style="height:50px;">
-                                        </div>
-                                        <div class="mt-3 d-flex flex-column align-item-start  ml-2 w-100">
-                                            <label class="ms-2 text-gray" style="font-weight:500;">Phone number</label>
-                                            <input type="tel" class="form-control rounded-pill"
-                                                aria-describedby="emailHelp" placeholder="(xxx)-xxx-xxxx"
-                                                style="height:50px;">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                        <form class="h-100 col-11 mb-5" style="display:none;" id="form3">
-                            <div class="form-group col-12">
-                                <div class="mt-0">
-                                    <div class="form-group mt-3">
-                                        <div class="d-flex justify-content-between">
-                                            <div class="d-flex flex-column align-item-start mt-3" style="width: 48%;">
-                                                <label class="text-gray" style="font-weight:500;">Depart date</label>
-                                                <input type="date" class="form-control rounded-pill"
-                                                    style="height:40px;" style="height:50px;">
-                                            </div>
-                                            <div class="d-flex flex-column align-item-start mt-3" style="width: 48%;">
-                                                <label class="text-gray" style="font-weight:500;">Return date</label>
-                                                <input type="date" class="form-control rounded-pill"
-                                                    style="height:40px;" style="height:50px;">
-                                            </div>
-                                        </div>
-                                        <div class="d-flex flex-column align-item-start mt-3" style="width: 100%;">
-                                            <label class="text-gray" style="font-weight:500;">Vehicle Type</label>
-                                            <select class="form-control rounded-pill d-flex" id="vehicle-type-selector"
-                                                name="vehicle-type" style="height:50px;">
-                                                <option value="">--choose a vehicle type--</option>
-                                                <option value="sedan">Sedan</option>
-                                                <option value="hatchback">Hatchback</option>
-                                                <option value="coupe">Coupe</option>
-                                                <option value="suv">SUV</option>
-                                                <option value="van">Van</option>
-                                                <option value="truck">Truck</option>
-                                                <option value="convertible">Convertible</option>
-                                                <option value="hybrid">Hybrid</option>
-                                                <option value="electric">Electric</option>
-                                                <option value="sports-car">Sports Car</option>
-                                            </select>
-                                        </div>
-                                        <div class="d-flex flex-column align-item-start mt-3" style="width: 100%;">
-                                            <label class="text-gray" style="font-weight:500;">Credit/Debit Card
-                                                Number</label>
-                                            <input class="form-control rounded-pill" id="ccn" type="tel"
-                                                inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number"
-                                                maxlength="19" placeholder="xxxx xxxx xxxx xxxx" style="height:50px;">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-
-                    <div class="d-flex justify-content-between px-3">
-                        <div class="mt-4 col-10 d-flex justify-content-start">
-                            <div class="btn-group col-8" role="group" aria-label="Basic radio toggle button group">
-                                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off"
-                                    checked>
-                                <label class="btn btn-outline-primary" style="border-radius: 100px 0 0 100px;"
-                                    for="btnradio1">1</label>
-
-                                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-                                <label class="btn btn-outline-primary" for="btnradio2">2</label>
-
-                                <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-                                <label class="btn btn-outline-primary" style="border-radius: 0 100px 100px 0;"
-                                    for="btnradio3">3</label>
-                            </div>
-                        </div>
+                    <div class="h-100 d-flex flex-column justify-content-between" style="width:95%">
                         <div>
-                            <button type="submit" class="btn btn-secondary mt-4 col-12 border-0"
-                                style="border-radius: 20px; background-color: #1472ff;">Search
-                            </button>
+                            <h3 class="mt-3">Search</h3>
+                            <p class="text-secondary">*Enter as much information as the customer can provide</p>
+                        </div>
+                        <div class="col-12 d-flex justify-content-center">
+                            <form class="h-100 col-11 mb-5" style="display:flex;" id="form1">
+                                <div class="form-group col-12">
+                                    <div class="d-flex flex-column justify-content-between">
+                                        <div class="d-flex flex-column align-item-start w-100">
+                                            <label class="ms-2 text-gray" style="font-weight:500;">Reservation
+                                                number</label>
+                                            <input type="text" class="form-control rounded-pill"
+                                                aria-describedby="emailHelp" placeholder="14 digit confirmation number"
+                                                style="height:50px;">
+                                        </div>
+                                        <div class="mt-3 d-flex flex-column align-item-start w-100">
+                                            <label class="ms-2 text-gray" style="font-weight:500;">User ID</label>
+                                            <input type="text" class="form-control rounded-pill"
+                                                aria-describedby="emailHelp" placeholder="9 digit user id"
+                                                style="height:50px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <form class="h-100 col-11 mb-5" style="display:none;" id="form2">
+                                <div class="form-group col-12">
+                                    <div class="mt-0">
+                                        <div class="form-group mt-3">
+                                            <div class="d-flex flex-column align-item-start mr-2 w-100">
+                                                <label class="ms-2 text-gray" style="font-weight:500;">Customer
+                                                    Name</label>
+                                                <div class="d-flex justify-content-between gap-0" style="height:20px;">
+                                                    <input type="text" class="form-control" id="inputFirstName"
+                                                        aria-describedby="emailHelp" placeholder="first name"
+                                                        style="border-radius: 100px 0 0 100px; width: 50%; height:50px;">
+                                                    <input type="text" class="form-control" id="inputFirstName"
+                                                        aria-describedby="emailHelp" placeholder="last name"
+                                                        style="border-radius: 0 100px 100px 0; width: 50%; height:50px;">
+                                                </div>
+                                            </div>
+                                            <div class="mt-5 d-flex flex-column align-item-start mr-2 w-100">
+                                                <label class="ms-2 text-gray" style="font-weight:500;">Email</label>
+                                                <input type="email" class="form-control rounded-pill"
+                                                    aria-describedby="emailHelp" placeholder="customer@mail.com"
+                                                    style="height:50px;">
+                                            </div>
+                                            <div class="mt-3 d-flex flex-column align-item-start  ml-2 w-100">
+                                                <label class="ms-2 text-gray" style="font-weight:500;">Phone
+                                                    number</label>
+                                                <input type="tel" class="form-control rounded-pill"
+                                                    aria-describedby="emailHelp" placeholder="(xxx)-xxx-xxxx"
+                                                    style="height:50px;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <form class="h-100 col-11 mb-5" style="display:none;" id="form3">
+                                <div class="form-group col-12">
+                                    <div class="mt-0">
+                                        <div class="form-group mt-3">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="d-flex flex-column align-item-start mt-3"
+                                                    style="width: 48%;">
+                                                    <label class="text-gray" style="font-weight:500;">Depart
+                                                        date</label>
+                                                    <input type="date" class="form-control rounded-pill"
+                                                        style="height:40px;" style="height:50px;">
+                                                </div>
+                                                <div class="d-flex flex-column align-item-start mt-3"
+                                                    style="width: 48%;">
+                                                    <label class="text-gray" style="font-weight:500;">Return
+                                                        date</label>
+                                                    <input type="date" class="form-control rounded-pill"
+                                                        style="height:40px;" style="height:50px;">
+                                                </div>
+                                            </div>
+                                            <div class="d-flex flex-column align-item-start mt-3" style="width: 100%;">
+                                                <label class="text-gray" style="font-weight:500;">Vehicle Type</label>
+                                                <select class="form-control rounded-pill d-flex"
+                                                    id="vehicle-type-selector" name="vehicle-type" style="height:50px;">
+                                                    <option value="">--choose a vehicle type--</option>
+                                                    <option value="sedan">Sedan</option>
+                                                    <option value="hatchback">Hatchback</option>
+                                                    <option value="coupe">Coupe</option>
+                                                    <option value="suv">SUV</option>
+                                                    <option value="van">Van</option>
+                                                    <option value="truck">Truck</option>
+                                                    <option value="convertible">Convertible</option>
+                                                    <option value="hybrid">Hybrid</option>
+                                                    <option value="electric">Electric</option>
+                                                    <option value="sports-car">Sports Car</option>
+                                                </select>
+                                            </div>
+                                            <div class="d-flex flex-column align-item-start mt-3" style="width: 100%;">
+                                                <label class="text-gray" style="font-weight:500;">Credit/Debit Card
+                                                    Number</label>
+                                                <input class="form-control rounded-pill" id="ccn" type="tel"
+                                                    inputmode="numeric" pattern="[0-9\s]{13,19}"
+                                                    autocomplete="cc-number" maxlength="19"
+                                                    placeholder="xxxx xxxx xxxx xxxx" style="height:50px;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="d-flex justify-content-between px-3">
+                            <div class="mt-4 col-10 d-flex justify-content-start">
+                                <div class="btn-group col-8" role="group" aria-label="Basic radio toggle button group">
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio1"
+                                        autocomplete="off" checked>
+                                    <label class="btn btn-outline-primary" style="border-radius: 100px 0 0 100px;"
+                                        for="btnradio1">1</label>
+
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio2"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-primary" for="btnradio2">2</label>
+
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio3"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-primary" style="border-radius: 0 100px 100px 0;"
+                                        for="btnradio3">3</label>
+                                </div>
+                            </div>
+                            <div>
+                                <button type="submit" class="btn btn-secondary mt-4 col-12 border-0"
+                                    style="border-radius: 20px; background-color: #1472ff;">Search
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- second block content -->
                 <div class="p-1 me-3 overflow-hidden" style="border-radius: 10px; height: 100%; width: 25%;">
-                    <h3 class="py-2" style="height:6%">Search Results</h3>
+                    <h3 class="mt-3 py-2" style="height:6%">Search Results</h3>
                     <span class="text-secondary">number of search result: <span class="text-primary">10
                             trips</span></span>
                     <div class="list-group my-3 pb-5" style="height:94%; border-radius: 10px;" id="trip-list">
-                        <div class="card mb-3">
-                            <div class="card-body">
-                                <h5 class="card-title">Steve Laboni</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">Res# : 3320-88673-88992</h6>
-                                <h6 class="card-subtitle mb-2 text-muted">phone# : (123)-456-7890</h6>
-
-                                <div class="card-text extra_info" style="display:none;" id="extra_info1">
-                                    <p>EXTRA DETAILS</p>
-                                    <p class="card-text mb-0">Price: $200</p>
-                                    <p class="card-text mb-0">Reserved vehicle: Honda</p>
-                                    <p class="card-text mb-0">License Plate: JUX-123</p>
-                                    <p class="card-text mb-0">Depart: 10/2/25</p>
-                                    <p class="card-text">Return: 10/9/25</p>
-                                    <a href="#" class="card-link">Edit Reservation</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card mb-3">
-                            <div class="card-body">
-                                <h5 class="card-title">Steve Laboni</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">Res# : 3320-88673-88992</h6>
-                                <h6 class="card-subtitle mb-2 text-muted">phone# : (123)-456-7890</h6>
-
-
-                                <div class="card-text extra_info" style="display:none;" id="extra_info2">
-                                    <p>EXTRA DETAILS</p>
-                                    <p class="card-text mb-0">Price: $200</p>
-                                    <p class="card-text mb-0">Reserved vehicle: Honda</p>
-                                    <p class="card-text mb-0">License Plate: JUX-123</p>
-                                    <p class="card-text mb-0">Depart: 10/2/25</p>
-                                    <p class="card-text">Return: 10/9/25</p>
-                                    <a href="#" class="card-link">Edit Reservation</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card mb-3">
-                            <div class="card-body">
-                                <h5 class="card-title">Steve Laboni</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">Res# : 3320-88673-88992</h6>
-                                <h6 class="card-subtitle mb-2 text-muted">phone# : (123)-456-7890</h6>
-
-                                <div class="card-text extra_info" style="display:none;" id="extra_info3">
-                                    <p>EXTRA DETAILS</p>
-                                    <p class="card-text mb-0">Price: $200</p>
-                                    <p class="card-text mb-0">Reserved vehicle: Honda</p>
-                                    <p class="card-text mb-0">License Plate: JUX-123</p>
-                                    <p class="card-text mb-0">Depart: 10/2/25</p>
-                                    <p class="card-text">Return: 10/9/25</p>
-                                    <a href="#" class="card-link">Edit Reservation</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card mb-3">
-                            <div class="card-body">
-                                <h5 class="card-title">Steve Laboni</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">Res# : 3320-88673-88992</h6>
-                                <h6 class="card-subtitle mb-2 text-muted">phone# : (123)-456-7890</h6>
-
-                                <div class="card-text extra_info" style="display:none;" id="extra_info3">
-                                    <p>EXTRA DETAILS</p>
-                                    <p class="card-text mb-0">Price: $200</p>
-                                    <p class="card-text mb-0">Reserved vehicle: Honda</p>
-                                    <p class="card-text mb-0">License Plate: JUX-123</p>
-                                    <p class="card-text mb-0">Depart: 10/2/25</p>
-                                    <p class="card-text">Return: 10/9/25</p>
-                                    <a href="#" class="card-link">Edit Reservation</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card mb-3">
-                            <div class="card-body">
-                                <h5 class="card-title">Steve Laboni</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">Res# : 3320-88673-88992</h6>
-                                <h6 class="card-subtitle mb-2 text-muted">phone# : (123)-456-7890</h6>
-
-                                <div class="card-text extra_info" style="display:none;" id="extra_info3">
-                                    <p>EXTRA DETAILS</p>
-                                    <p class="card-text mb-0">Price: $200</p>
-                                    <p class="card-text mb-0">Reserved vehicle: Honda</p>
-                                    <p class="card-text mb-0">License Plate: JUX-123</p>
-                                    <p class="card-text mb-0">Depart: 10/2/25</p>
-                                    <p class="card-text">Return: 10/9/25</p>
-                                    <a href="#" class="card-link">Edit Reservation</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card mb-3">
-                            <div class="card-body">
-                                <h5 class="card-title">Steve Laboni</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">Res# : 3320-88673-88992</h6>
-                                <h6 class="card-subtitle mb-2 text-muted">phone# : (123)-456-7890</h6>
-
-                                <div class="card-text extra_info" style="display:none;" id="extra_info3">
-                                    <p>EXTRA DETAILS</p>
-                                    <p class="card-text mb-0">Price: $200</p>
-                                    <p class="card-text mb-0">Reserved vehicle: Honda</p>
-                                    <p class="card-text mb-0">License Plate: JUX-123</p>
-                                    <p class="card-text mb-0">Depart: 10/2/25</p>
-                                    <p class="card-text">Return: 10/9/25</p>
-                                    <a href="#" class="card-link">Edit Reservation</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card mb-3">
-                            <div class="card-body">
-                                <h5 class="card-title">Steve Laboni</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">Res# : 3320-88673-88992</h6>
-                                <h6 class="card-subtitle mb-2 text-muted">phone# : (123)-456-7890</h6>
-
-                                <div class="card-text extra_info" style="display:none;" id="extra_info3">
-                                    <p>EXTRA DETAILS</p>
-                                    <p class="card-text mb-0">Price: $200</p>
-                                    <p class="card-text mb-0">Reserved vehicle: Honda</p>
-                                    <p class="card-text mb-0">License Plate: JUX-123</p>
-                                    <p class="card-text mb-0">Depart: 10/2/25</p>
-                                    <p class="card-text">Return: 10/9/25</p>
-                                    <a href="#" class="card-link">Edit Reservation</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card mb-3">
-                            <div class="card-body">
-                                <h5 class="card-title">Steve Laboni</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">Res# : 3320-88673-88992</h6>
-                                <h6 class="card-subtitle mb-2 text-muted">phone# : (123)-456-7890</h6>
-
-                                <div class="card-text extra_info" style="display:none;" id="extra_info3">
-                                    <p>EXTRA DETAILS</p>
-                                    <p class="card-text mb-0">Price: $200</p>
-                                    <p class="card-text mb-0">Reserved vehicle: Honda</p>
-                                    <p class="card-text mb-0">License Plate: JUX-123</p>
-                                    <p class="card-text mb-0">Depart: 10/2/25</p>
-                                    <p class="card-text">Return: 10/9/25</p>
-                                    <a href="#" class="card-link">Edit Reservation</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card mb-3">
-                            <div class="card-body">
-                                <h5 class="card-title">Steve Laboni</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">Res# : 3320-88673-88992</h6>
-                                <h6 class="card-subtitle mb-2 text-muted">phone# : (123)-456-7890</h6>
-
-                                <div class="card-text extra_info" style="display:none;" id="extra_info3">
-                                    <p>EXTRA DETAILS</p>
-                                    <p class="card-text mb-0">Price: $200</p>
-                                    <p class="card-text mb-0">Reserved vehicle: Honda</p>
-                                    <p class="card-text mb-0">License Plate: JUX-123</p>
-                                    <p class="card-text mb-0">Depart: 10/2/25</p>
-                                    <p class="card-text">Return: 10/9/25</p>
-                                    <a href="#" class="card-link">Edit Reservation</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card mb-3">
-                            <div class="card-body">
-                                <h5 class="card-title">Steve Laboni</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">Res# : 3320-88673-88992</h6>
-                                <h6 class="card-subtitle mb-2 text-muted">phone# : (123)-456-7890</h6>
-
-                                <div class="card-text extra_info" style="display:none;" id="extra_info3">
-                                    <p>EXTRA DETAILS</p>
-                                    <p class="card-text mb-0">Price: $200</p>
-                                    <p class="card-text mb-0">Reserved vehicle: Honda</p>
-                                    <p class="card-text mb-0">License Plate: JUX-123</p>
-                                    <p class="card-text mb-0">Depart: 10/2/25</p>
-                                    <p class="card-text">Return: 10/9/25</p>
-                                    <a href="#" class="card-link">Edit Reservation</a>
-                                </div>
-                            </div>
-                        </div>
+                        <!-- The trip cards will be appended here -->
                     </div>
                 </div>
+
                 <!-- third block content -->
-                <div class="" style="height:100%; border-radius: 20px; width: 40%; background-color: #fff;">
-                    <div class="p-3 h-100 d-flex flex-column justify-content-between">
-                        <h3>Trip Detail</h3>
+                <div class="d-flex flex-column align-items-center overflow-y-scroll" id="third-block"
+                    style="height:100%; border-radius: 20px; width: 40%; background-color: #fff;">
+                    <div class="p-3 d-flex flex-column justify-content-start align-items-center overflow-y-scroll" style="width:95%;">
+                        <div class="mt-3 w-100 d-flex justify-content-between align-items-center">
+                            <h3 class="">Trip Detail</h3>
+                            <button class="btn btn-primary px-3 rounded-pill" id="exportBtn" style="font-size:1rem;color:#fff;">Export Summary<i class="fa-solid fa-download" style="margin-left: 10px;"></i></button>
+                        </div>
+                        <!-- reservation number -->
+                        <div class="d-flex justify-content-between" style="width:100%;">
+                            <div class="d-flex flex-column justify-content-start align-items-start">
+                                <h6 class="fw-normal text-secondary">Reservation #: 1234-5678-90134</h6>
+                            </div>
+                        </div>
+
+                        <!-- trip info -->
+                        <div class="d-flex flex-column align-items-center justify-content-start" style="width:calc(100%/0.9);transform: scale(0.9); margin-top:-6%; margin-bottom:-8%;">
+                            <!-- user info -->
+                            <div class="mb-5 divider">
+                                <hr>
+                                <h5>Reservation Holder</h5>
+                                <hr>
+                            </div>
+                            <div class="mb-4 d-flex justify-content-between" style="width:100%;">
+                                <div class="d-flex flex-column justify-content-start align-items-start">
+                                    <h3 class="">Steve Laboni</h3>
+                                    <span class="text-secondary">birthdate: 01/01/2000</span>
+                                    <span class="text-secondary">phone: (123)-456-7890</span>
+                                    <span class="text-secondary">Email: slaboni@gmail.com</span>
+                                    <span class="text-secondary">user id: 098765432</span>
+                                </div>
+                                <img src="https://i.pravatar.cc/150?img=2" alt="avatar" class="rounded-circle"
+                                    style="height: 120px; width: auto;">
+                            </div>
+
+                            <!-- trip date info -->
+                            <div class="mt-5 divider">
+                                <hr>
+                                <h5>Trip Duration</h5>
+                                <hr>
+                            </div>
+                            <div class="my-5 w-100 d-flex justify-content-between align-items-center">
+                                <div class="pe-3 d-flex justify-content-start" id="element-1">
+                                    <div class="p-3 d-flex flex-column justify-content-between align-items-center"
+                                        style="border-radius: 20px; height:130px; width:160px; background-color: #eee;">
+                                        <div class="d-flex flex-column justify-content-center align-items-center">
+                                            <h2 class="fw-bolder">STL</h2>
+                                            <span class="text-secondary">St.Louis, MO</span>
+                                        </div>
+                                        <span class="text-secondary">01/01/2024</span>
+                                    </div>
+                                </div>
+                                <div class="my-3 d-flex flex-column justify-content-between"
+                                    style="padding: 40px 0px; width:calc(100vw * 0.33 * 0.95 - 400px); height:150px;">
+                                    <div class="d-flex flex-column justify-content-between">
+                                        <hr style="width:100%; height:2px;">
+                                        <div class="d-flex align-items-center">
+                                            <i class="arrow-right"></i>
+                                            <hr style="width:100%; height:2px;">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="px-2 d-flex justify-content-start" id="element-2">
+                                    <div class="d-flex flex-column justify-content-center align-items-center"
+                                        style="border-radius: 15px; height:130px; width:80px; background-color: transparent;">
+                                        <span class="text-secondary">5 days</span>
+                                        <span class="text-secondary">round trip</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-column justify-content-between"
+                                    style="padding: 40px 0px; width:calc(100vw * 0.33 * 0.95 - 400px); height:150px;">
+                                    <div class="d-flex flex-column justify-content-between">
+                                        <div class="d-flex align-items-center">
+                                            <hr style="width:100%; height:2px;">
+                                            <i class="arrow-left"></i>
+                                        </div>
+                                        <hr style="width:100%; height:2px;">
+                                    </div>
+                                </div>
+                                <div class="ps-3 d-flex justify-content-end" id="element-3">
+                                    <div class="p-3 d-flex flex-column justify-content-between align-items-center"
+                                        style="border-radius: 15px; height:130px; width:160px; background-color: #eee;">
+                                        <div class="d-flex flex-column justify-content-center align-items-center">
+                                            <h2 class="fw-bolder">CHI</h2>
+                                            <span class="text-secondary">Chicago, IL</span>
+                                        </div>
+                                        <span class="text-secondary">05/01/2024</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- trip car info -->
+                            <div class="my-3 divider">
+                                <hr>
+                                <h5>Rented Vehicle</h5>
+                                <hr>
+                            </div>
+                            <div class="mt-5 mb-4 w-100 d-flex justify-content-between align-items-start">
+                                <img src="./assets/hondaSUV.png" alt="car" style="height: 150px; width: auto;">
+                                <div class="d-flex flex-column justify-content-start align-items-end">
+                                    <h3 class="">Honda SUV</h3>
+                                    <span class="text-secondary">Model: 2012 CRV</span>
+                                    <span class="text-secondary">Color: Gray</span>
+                                    <span class="text-secondary">Plate Number: MO9-123</span>
+                                </div>
+                            </div>
+                            <!-- payment info -->
+                            <div class="mt-5 divider">
+                                <hr>
+                                <h5>Payment Information</h5>
+                                <hr>
+                            </div>
+                            <div class="my-5 w-100 d-flex justify-content-center">
+                                <div class="d-flex flex-column justify-content-center align-items-center"
+                                style="width:400px;">
+                                    <div class="my-3 credit-card">
+                                        <div class="w-100 d-flex justify-content-end">
+                                            <img src="./assets/visa.webp" alt="visa" class="credit-card-logo"
+                                                style="height:66px;">
+                                        </div>
+                                        <div class="my-3 credit-card-number">XXXX XXXX XXXX 3456</div>
+                                        <div class="d-flex flex-column align-items-start justify-content-between">
+                                            <div class="credit-card-holder">Steve Laboni</div>
+                                            <div class="credit-card-expiry">Expiration date: 01/01/2028</div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-3 w-100 d-flex flex-column">
+                                        <div class="w-100 d-flex justify-content-between">
+                                            <span class="text-secondary">Rental Car Fee</span>
+                                            <hr style="width:200px;">
+                                            <span class="text-secondary">$450.00</span>
+                                        </div>
+                                        <div class="w-100 d-flex justify-content-between align-items-center">
+                                            <span class="text-secondary">Fuel Charges</span>
+                                            <hr style="width:200px;">
+                                            <span class="text-secondary">$70.00</span>
+                                        </div>
+                                        <div class="w-100 d-flex justify-content-between">
+                                            <span class="text-secondary">Insurance Fee</span>
+                                            <hr style="width:200px;">
+                                            <span class="text-secondary">$100.00</span>
+                                        </div>
+                                        <div class="w-100 d-flex justify-content-between">
+                                            <span class="text-secondary">State Tax (6%)</span>
+                                            <hr style="width:200px;">
+                                            <span class="text-secondary">$37.20</span>
+                                        </div>
+                                        <div class="w-100 d-flex justify-content-between">
+                                            <span class="text-secondary">City Tax (3%)</span>
+                                            <hr style="width:200px;">
+                                            <span class="text-secondary">$18.60</span>
+                                        </div>
+                                        <div class="w-100 d-flex justify-content-between">
+                                            <span class="text-secondary">Total Tax</span>
+                                            <hr style="width:200px;">
+                                            <span class="text-secondary">$55.80</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-between" style="width:auto;white-space: nowrap;">
+                                        <span class="text-dark fw-bold fs-6">Total Amount Due</span>
+                                        <hr class="mx-3" style="width:160px;border-top: 1px solid black;">
+                                        <span class="text-dark fw-bold fs-6">$675.80</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- done & edit buttons -->
+                            <div class="mt-5 w-100 d-flex justify-content-between">
+                                <button class="w-50 btn btn-primary me-3" style="border-radius:50px;">Done</button>
+                                <button class="w-50 btn btn-secondary ms-3" style="border-radius:50px;">Edit</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -381,80 +390,14 @@
             © 2023 Copyright:
             <a class="text-secondary" href="">Paige and Jeffrey</a>
         </div>
-        <!-- Copyright -->
     </footer>
 
 </body>
 
-<script src="script.js"></script>
-<script>
-    const cardNumberInput = document.getElementById('ccn');
-
-    cardNumberInput.addEventListener('input', (event) => {
-        const input = event.target;
-        const { value } = input;
-
-        // Remove all non-numeric characters from the input value
-        const formattedValue = value.replace(/\D/g, '');
-
-        // Add a space after every 4 digits
-        const newValue = formattedValue.replace(/(\d{4})/g, '$1 ');
-
-        // Set the input value to the formatted value
-        input.value = newValue.trim();
-    });
-</script>
-<script>
-    const searchButton = document.querySelector('.btn-secondary');
-
-    searchButton.addEventListener('mouseover', () => {
-        searchButton.style.backgroundColor = '#0b5cce';
-    });
-
-    searchButton.addEventListener('mouseout', () => {
-        searchButton.style.backgroundColor = '#1472ff';
-    });
-</script>
-<script>
-    const lookUpTripLink = document.querySelector('.nav-link');
-
-    lookUpTripLink.addEventListener('mouseover', () => {
-        lookUpTripLink.style.backgroundColor = '#0b5cce';
-        lookUpTripLink.style.borderColor = '#0b5cce';
-    });
-
-    lookUpTripLink.addEventListener('mouseout', () => {
-        lookUpTripLink.style.backgroundColor = '#1472ff';
-        lookUpTripLink.style.borderColor = '#1472ff';
-    });
-</script>
-<script>
-    // Get references to the radio buttons and forms
-    const radio1 = document.getElementById('btnradio1');
-    const radio2 = document.getElementById('btnradio2');
-    const radio3 = document.getElementById('btnradio3');
-    const form1 = document.getElementById('form1');
-    const form2 = document.getElementById('form2');
-    const form3 = document.getElementById('form3');
-
-    // Add event listeners to the radio buttons
-    radio1.addEventListener('click', () => {
-        form1.style.display = 'flex';
-        form2.style.display = 'none';
-        form3.style.display = 'none';
-    });
-
-    radio2.addEventListener('click', () => {
-        form1.style.display = 'none';
-        form2.style.display = 'flex';
-        form3.style.display = 'none';
-    });
-
-    radio3.addEventListener('click', () => {
-        form1.style.display = 'none';
-        form2.style.display = 'none';
-        form3.style.display = 'flex';
-    });
-</script>
+<script src="./javascript/script.js"></script>
+<script src="./javascript/tripCards.js"></script>
+<script src="./javascript/creditCardFormat.js"></script>
+<script src="./javascript/searchTripToggle.js"></script>
+<script src="./javascript/hovers.js"></script>
 
 </html>
