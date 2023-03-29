@@ -1,4 +1,5 @@
 const cardNumberInput = document.getElementById('ccn');
+const licenseInput = document.getElementById('license');
 
 cardNumberInput.addEventListener('input', (event) => {
     const input = event.target;
@@ -9,6 +10,20 @@ cardNumberInput.addEventListener('input', (event) => {
 
     // Add a space after every 4 digits
     const newValue = formattedValue.replace(/(\d{4})/g, '$1 ');
+
+    // Set the input value to the formatted value
+    input.value = newValue.trim();
+});
+
+licenseInput.addEventListener('input', (event) => {
+    const input = event.target;
+    const { value } = input;
+
+    // Remove all non-numeric characters from the input value
+    const formattedValue = value.replace(/\D/g, '');
+
+    // Add a space after every 4 digits
+    const newValue = formattedValue.replace(/(\d{3})/g, '$1 ');
 
     // Set the input value to the formatted value
     input.value = newValue.trim();

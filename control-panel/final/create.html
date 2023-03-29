@@ -23,513 +23,486 @@
 
 </head>
 
-<body style="min-height:100vh; background-color: #ebebeb;">
+<body class="d-flex flex-column align-items-center" style="min-height:100vh; background-color: #f1f3f4;">
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: #ffffff;">
-        <div class="container-fluid">
-            <!-- <a class="navbar-brand" href="#">Rent-A-Roadtrip</a> -->
-
-            <i class="fa-solid fa-car-side ms-5 me-2" style="color: #1472ff; font-size: 2rem;"></i>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link mx-3" aria-current="page" href="index.html"
-                            style="border: #1472ff 1px solid; border-radius: 3px;">Look-up Trip</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="create.html"
-                            style="color: white; background-color: #1472ff; border: #1472ff 1px solid; border-radius: 3px;">Create
-                            Trip</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <div class="container p-0 ">
-        <div class="row gx-3 gy-2 mt-3">
-            <!-- customer info ----------------------------------------------------------- -->
-            <div class="col-6">
-                <div style="background-color: #ffffff;">
-                    <form class="p-3 h-50">
-                        <h4>Customer Information</h4>
-                        <!-- name -->
-                        <div class="form-group">
-                            <label class="text-gray fw-bold">Customer Name</label>
-                            <div class="d-flex">
-                                <input type="text" class="form-control mr-2 w-50" id="inputFirstName"
-                                    aria-describedby="emailHelp" placeholder="Enter first name">
-                                <input type="text" class="form-control ml-2 w-50" id="inputLastName"
-                                    aria-describedby="emailHelp" placeholder="Enter last name">
-                            </div>
-                        </div>
-
-                        <!-- email & phone number -->
-                        <div class="form-group">
-                            <div class="d-flex justify-content-between">
-                                <div class="d-flex flex-column align-item-start mr-2 w-50">
-                                    <label class="text-gray fw-bold">Email</label>
-                                    <input type="email" class="form-control" id="inputFirstName"
-                                        aria-describedby="emailHelp" placeholder="Enter email address">
-                                </div>
-                                <div class="d-flex flex-column align-item-start  ml-2 w-50">
-                                    <label class="text-gray fw-bold">Phone number</label>
-                                    <input type="tel" class="form-control" id="inputFirstName"
-                                        aria-describedby="emailHelp" placeholder="(xxx)-xxx-xxxx">
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- id & confirmation number -->
-                        <div class="form-group">
-                            <div class="d-flex justify-content-between">
-                                <div class="d-flex flex-column align-item-start mr-2 w-50">
-                                    <label class="text-gray fw-bold">Driver's license #</label>
-                                    <input type="text" class="form-control" id="inputFirstName"
-                                        aria-describedby="emailHelp" placeholder="Enter driver's license #">
-                                </div>
-                                <!-- <div class="d-flex flex-column align-item-start ml-2 w-50">
-                                    <label class="text-gray fw-bold">Confirmation number</label>
-                                    <input type="text" class="form-control" id="inputFirstName"
-                                        aria-describedby="emailHelp" placeholder="Enter confirmation number">
-                                </div> -->
-                            </div>
-                        </div>
-                    </form>
-                </div>
-
-                <div class="mt-3 p-3" style="background-color: #ffffff;">
-                    <h4>Payment Information</h4>
-                    <h5>Card Information</h5>
-                    <div class="form-group">
-                        <div class="d-flex flex-column align-item-start mr-2 w-50">
-                            <label for="ccn">Credit Card Number:</label>
-                            <input id="ccn" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}"
-                                autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx">
-                        </div>
-                    </div>
-
-                    <!-- Billing address -->
-                    <h5 class="mt-3">Billing Address</h5>
-
-                    <div class="form-group">
-                        <div class="d-flex flex-column align-item-start mr-2 w-100">
-
-                            <!-- Address Line 1 -->
-                            <label for="Address Line 1">Address Line 1:</label>
-                            <input type="text" class="form-control" id="inputAddressLine_billing"
-                                aria-describedby="emailHelp" placeholder="Address Line 1">
-
-                            <!-- Address Line 2 -->
-                            <label for="Address Line 2">Address Line 2:</label>
-                            <input type="text" class="form-control" id="inputAddressLineTwo_billing"
-                                aria-describedby="emailHelp" placeholder="Address Line 2">
-
-                            <div class="form-group">
-                                <div class="d-flex justify-content-between">
-
-                                    <div class="d-flex flex-column align-item-start  ml-2 w-50">
-
-                                        <!-- City -->
-                                        <label for="City">City:</label>
-                                        <input type="text" class="form-control" id="inputCity_billing"
-                                            aria-describedby="emailHelp" placeholder="City">
-
-                                    </div>
-                                    <div class="d-flex flex-column align-item-start mr-2 w-50">
-                                        <!-- State -->
-                                        <label for="State">State / Provence:</label>
-                                        <input type="text" class="form-control" id="inputState_billing"
-                                            aria-describedby="emailHelp" placeholder="State/Provence">
-
-                                    </div>
-
-                                </div>
-                            </div>
-
-
-                            <!-- Zip -->
-                            <label for="Zip">Zip / Postal Code:</label>
-                            <input type="text" class="form-control" id="inputFirstName" aria-describedby="emailHelp"
-                                placeholder="Zip">
-
-                        </div>
+    <div style="width:95vw;">
+        <!-- ========== NAVBAR ========== -->
+        <nav class="w-100 navbar navbar-expand-lg bg-body-tertiary d-flex justify-content-center align-items-center">
+            <div class="d-flex align-items-center rounded-pill"
+                style="margin: 0.5vh 0; height: 7vh; width: 100%; background-color: #ffffff;">
+                <div class="container-fluid" style="width:100%">
+                    <!-- <a class="navbar-brand" href="#">Rent-A-Roadtrip</a> -->
+                    <!-- <i class="fa-solid fa-car-side ms-5 me-2" style="color: #1472ff; font-size: 2rem;"></i> -->
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link me-2 px-3 rounded-pill" id="lookup" href="index.html">Look-up
+                                    Trip</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active px-3 rounded-pill" id="create"
+                                    style="color: white; background-color: #1472ff; border: #1472ff 1px solid;"
+                                    href="create.html">Create
+                                    Trip</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
+        </nav>
 
-            <!-- stops --------------------------------------------------------------------------- -->
-            <div class="col-6">
-                <div class="p-3" style="background-color: #ffffff;">
-
-
-                    <h4>Route</h4>
-                    <!-- round-trip or one way-------------- -->
-                    <div class="btn-group col-4" role="group" aria-label="Basic radio toggle button group">
-                        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
-                        <label class="btn btn-outline-primary" for="btnradio1">Round-Trip</label>
-
-                        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-                        <label class="btn btn-outline-primary" for="btnradio2">One-Way</label>
-                    </div>
-
-                    <div>
-                        <form>
-                            <!-- duration -->
-                            <div class="form-group">
-                                <div class="d-flex justify-content-between">
-                                    <div class="d-flex flex-column align-item-start mr-2 w-50">
-                                        <label class="text-gray fw-bold">Depart date</label>
-                                        <input type="datetime-local" class="form-control" id="inputFirstName"
-                                            aria-describedby="emailHelp">
+        <!-- ========== MAIN ========== -->
+        <div class="p-0" style="width:95vw;">
+            <div class="gx-3 gy-2 d-flex justify-content-between align-items-stretch">
+                <!-- customer info ----------------------------------------------------------- -->
+                <div class="col-7 pe-3 d-flex">
+                    <div class="p-3 me-3" style="border-radius: 20px; background-color: #ffffff;">
+                        <form class="p-3">
+                            <div>
+                                <h3>Customer Info</h3>
+                            </div>
+                            <div class="mt-5 d-flex justify-content-center">
+                                <form class="h-100 col-11 mb-5" style="display:flex;" id="form1">
+                                    <div class="h-100 form-group col-12 d-flex flex-column justify-content-between">
+                                        <div class="d-flex flex-column align-item-start mr-2 w-100">
+                                            <label class="ms-2 text-gray" style="font-weight:500;">Customer
+                                                Name</label>
+                                            <div class="d-flex justify-content-between gap-0" style="height:auto">
+                                                <input type="text" class="form-control" aria-describedby="emailHelp"
+                                                    placeholder="first name"
+                                                    style="border-radius: 100px 0 0 100px; width: 50%; height:40px;">
+                                                <input type="text" class="form-control" aria-describedby="emailHelp"
+                                                    placeholder="last name"
+                                                    style="border-radius: 0 100px 100px 0; width: 50%; height:40px;">
+                                            </div>
+                                        </div>
+                                        <div class="mt-3 d-flex flex-column align-item-start mr-2 w-100">
+                                            <label class="ms-2 text-gray" style="font-weight:500;">Date of Birth</label>
+                                            <input type="date" class="form-control rounded-pill" style="height:40px;">
+                                        </div>
+                                        <div class="mt-3 d-flex flex-column align-item-start mr-2 w-100">
+                                            <label class="ms-2 text-gray" style="font-weight:500;">Email</label>
+                                            <input type="email" class="form-control rounded-pill"
+                                                aria-describedby="emailHelp" placeholder="customer@mail.com"
+                                                style="height:40px;">
+                                        </div>
+                                        <div class="mt-3 d-flex flex-column align-item-start  ml-2 w-100">
+                                            <label class="ms-2 text-gray" style="font-weight:500;">Phone
+                                                number</label>
+                                            <input type="tel" class="form-control rounded-pill"
+                                                aria-describedby="emailHelp" placeholder="(xxx)-xxx-xxxx"
+                                                style="height:40px;">
+                                        </div>
+                                        <div class="mt-3 d-flex flex-column align-item-start  ml-2 w-100">
+                                            <label class="ms-2 text-gray" style="font-weight:500;">License
+                                                ID</label>
+                                            <input id="license" type="tel" inputmode="numeric" pattern="[0-9\s]{10,19}"
+                                                autocomplete="cc-number" maxlength="1" placeholder="xxx xxx xxx"
+                                                class="form-control rounded-pill" style="height:40px;">
+                                        </div>
                                     </div>
-                                    <div class="d-flex flex-column align-item-start ml-2 w-50">
-                                        <label class="text-gray fw-bold">Return date</label>
-                                        <input type="datetime-local" class="form-control" id="inputFirstName"
-                                            aria-describedby="emailHelp">
-                                    </div>
-                                </div>
+                                </form>
                             </div>
                         </form>
                     </div>
 
-                    <!-- Add stop -->
-                    <div>
-                        <div class="d-flex flex-column align-item-start mr-2 mt-3 w-100">
-                            <label class="text-gray fw-bold">Add Stop</label>
-                            <div class="d-flex flex-row justify-content-between align-items-center">
-                                <input type="text" class="form-control" id="inputFirstName" aria-describedby="emailHelp"
-                                    placeholder="City">
-                                <input type="text" class="form-control" id="inputFirstName" aria-describedby="emailHelp"
-                                    placeholder="State">
-                                <i class="fa-solid fa-circle-plus mx-3" style="font-size: 1.8rem"></i>
+                    <div class="p-3" style="border-radius: 20px; background-color: #ffffff;">
+                        <div class="p-3">
+
+                            <h3>Payment Info</h3>
+
+                            <div
+                                class="mt-5 h-100 form-group col-12 d-flex flex-column justify-content-between overflow-y-scroll">
+                                <div class="d-flex flex-column align-item-start mr-2 w-100">
+                                    <label class="ms-2 text-gray" style="font-weight:500;">Card Number</label>
+                                    <input id="ccn" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}"
+                                        autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx"
+                                        class="form-control rounded-pill" style="height:40px;">
+                                </div>
+                                <div class="d-flex flex-column align-item-start mt-3" style="width: 100%; height:40px;">
+                                    <label class="ms-2 text-gray" style="font-weight:500;">Credit Card Type</label>
+                                    <select class="form-control rounded-pill d-flex" id="credit-card-type-selector"
+                                        name="credit-card-type" style="color: #6c757d; height:50px;">
+                                        <option value="">--Choose a credit card type--</option>
+                                        <option value="visa">Visa</option>
+                                        <option value="mastercard">Mastercard</option>
+                                        <option value="american-express">American Express</option>
+                                        <option value="discover">Discover</option>
+                                        <option value="jcb">JCB</option>
+                                        <option value="diners-club">Diners Club</option>
+                                        <option value="maestro">Maestro</option>
+                                        <option value="unionpay">UnionPay</option>
+                                        <option value="rupay">Rupay</option>
+                                    </select>
+                                </div>
+                                <div class="mt-5 d-flex flex-column align-item-start  ml-2 w-100">
+                                    <label class="ms-2 text-gray" style="font-weight:500;">Billing Address</label>
+                                    <input type="text" class="mt-2 form-control rounded-pill"
+                                        placeholder="Address line 1" style="height:40px;">
+                                    <input type="text" class="mt-2 form-control rounded-pill"
+                                        placeholder="Address line 2" style="height:40px;">
+                                    <div class="mt-2 d-flex justify-content-between gap-0" style="height:auto;">
+                                        <input type="text" class="form-control" placeholder="City"
+                                            style="border-radius: 100px 0 0 100px; width: 50%; height:40px;">
+                                        <input type="text" class="form-control" placeholder="State"
+                                            style="border-radius: 0 100px 100px 0; width: 50%; height:40px;">
+                                    </div>
+                                    <input type="text" class="mt-2 form-control rounded-pill" placeholder="Zip Code"
+                                        style="height:40px;">
+                                </div>
                             </div>
                         </div>
                     </div>
-
-
-
-                    <!-- draggable list of stops -->
-                    <div class="d-flex mt-3">
-                        <ul class="list-group col-10" id="stopList">
-                            <li class="list-group-item">
-                                <div class="d-flex flex-column align-item-start mr-2 w-100">
-                                    <label class="text-gray fw-bold">Start at</label>
-                                    <div class="d-flex flex-row justify-content-between align-items-center">
-                                        <input type="text" class="form-control" id="inputFirstName"
-                                            aria-describedby="emailHelp" placeholder="City">
-                                        <input type="text" class="form-control" id="inputFirstName"
-                                            aria-describedby="emailHelp" placeholder="State">
-                                        <!-- <i class="fa-solid fa-circle-plus" style="color: #94e3fe; font-size: 1.8rem;"></i> -->
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-group-item">
-                                <div class="d-flex flex-column align-item-start mr-2 w-100">
-                                    <label class="text-gray fw-bold">stop 1</label>
-                                    <div class="d-flex flex-row">
-                                        <input type="text" class="form-control" id="inputFirstName"
-                                            aria-describedby="emailHelp" placeholder="City">
-                                        <input type="text" class="form-control" id="inputFirstName"
-                                            aria-describedby="emailHelp" placeholder="State">
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="list-group-item">
-                                <div class="d-flex flex-column align-item-start mr-2 w-100">
-                                    <label class="text-gray fw-bold">End at</label>
-                                    <div class="d-flex flex-row">
-                                        <input type="text" class="form-control" id="inputFirstName"
-                                            aria-describedby="emailHelp" placeholder="City">
-                                        <input type="text" class="form-control" id="inputFirstName"
-                                            aria-describedby="emailHelp" placeholder="State">
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-
-                        <div class="col-2 border d-flex flex-column justify-content-between align-items-center">
-                            <p>1/2/2023</p>
-                            <p>1/2/2023</p>
-                        </div>
-
-                    </div>
                 </div>
 
-            </div>
+                <!-- stops --------------------------------------------------------------------------- -->
+                <div class="col-5">
+                    <div class="p-3 h-100" style="border-radius: 20px; background-color: #ffffff;">
 
+                        <div class="p-3">
+                            <h3>Route</h3>
+
+                            <!-- --------------round-trip or one way-------------- -->
+                            <div class="form-group col-12 d-flex flex-column justify-content-between"
+                                style="margin-top:10%;">
+                                <div class="mt-3 btn-group" role="group" aria-label="Basic radio toggle button group">
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio1"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-primary" for="btnradio1"
+                                        style="border-radius: 100px 0 0 100px; width: 50%; height:40px;">Round-Trip</label>
+
+                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio2"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-primary" for="btnradio2"
+                                        style="border-radius: 0 100px 100px 0; width: 50%; height:40px;">One-Way</label>
+                                </div>
+                            </div>
+
+                            <div class="mt-3 d-flex justify-content-center gap-0" style="height:auto">
+                                <div class="col-6">
+                                    <label class="ms-2 text-gray" style="font-weight:500;">Depart Date</label>
+                                    <input type="date" class="form-control"
+                                        style="border-radius: 100px 0 0 100px; width: 100%; height:40px;">
+                                </div>
+                                <div class="col-6">
+                                    <label class="text-gray" style="font-weight:500;">Return Date</label>
+                                    <input type="date" class="form-control"
+                                        style="border-radius: 0 100px 100px 0; width: 100%; height:40px;">
+                                </div>
+                            </div>
+
+                            <!-- Add stop -->
+                            <div>
+                                <div class="d-flex flex-column align-item-start mr-2 mt-3 w-100">
+                                    <label class="ms-2 text-gray" style="font-weight:500;">Add Stop</label>
+                                    <div class="d-flex justify-content-between align-items-center gap-0"
+                                        style="height:auto;">
+                                        <input type="text" class="form-control" placeholder="City"
+                                            style="border-radius: 100px 0 0 100px; width: 50%; height:40px;">
+                                        <input type="text" class="form-control" placeholder="State"
+                                            style="border-radius: 0 100px 100px 0; width: 50%; height:40px;">
+                                        <i id="addTrip" class="fa-solid fa-circle-plus mx-2"
+                                            style="color: #333; font-size: 1.8rem;"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <!-- draggable list of stops -->
+                            <div class="d-flex mt-3">
+                                <ul class="pe-2 list-group col-10" style="border-radius: 20px;" id="stopList">
+
+                                    <li class="list-group-item">
+                                        <div class="d-flex flex-column align-item-start mr-2 w-100">
+                                            <label class="ms-2 text-gray" style="font-weight:500;">Start at</label>
+                                            <div class="d-flex flex-row justify-content-between align-items-center">
+                                                <input type="text" class="form-control" placeholder="City"
+                                                    style="border-radius: 100px 0 0 100px; width: 50%; height:40px;">
+                                                <input type="text" class="form-control" placeholder="State"
+                                                    style="border-radius: 0 100px 100px 0; width: 50%; height:40px;">
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="list-group-item">
+                                        <div class="d-flex flex-column align-item-start mr-2 w-100">
+                                            <label class="ms-2 text-gray" style="font-weight:500;">Stop 1</label>
+                                            <div class="d-flex flex-row">
+                                                <input type="text" class="form-control" placeholder="City"
+                                                    style="border-radius: 100px 0 0 100px; width: 50%; height:40px;">
+                                                <input type="text" class="form-control" placeholder="State"
+                                                    style="border-radius: 0 100px 100px 0; width: 50%; height:40px;">
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="list-group-item">
+                                        <div class="d-flex flex-column align-item-start mr-2 w-100">
+                                            <label class="ms-2 text-gray" style="font-weight:500;">End At</label>
+                                            <div class="d-flex flex-row">
+                                                <input type="text" class="form-control" placeholder="City"
+                                                    style="border-radius: 100px 0 0 100px; width: 50%; height:40px;">
+                                                <input type="text" class="form-control" placeholder="State"
+                                                    style="border-radius: 0 100px 100px 0; width: 50%; height:40px;">
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                                <div class="col-2 border" style="border-radius: 20px;">
+                                    <div class="p-3 d-flex flex-column justify-content-between align-items-center"
+                                        style="margin-top: 25%; height: 95%;">
+                                        <p style="font-size:12px;">01/01/2023</p>
+                                        <hr style="transform: rotate(90deg); height:1px; width:40px;">
+                                        <p style="margin-top:10px; font-size:12px;">5 days</p>
+                                        <hr style="transform: rotate(90deg); height:1px; width:40px;">
+                                        <p style="margin-top:10px; font-size:12px;">05/01/2023</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- vehicle--------------------------------------------------------------------------------------------- -->
-        <div class="row ">
+        <div class="row">
             <div class="col-12">
-                <div class="mt-3 p-3" style="background-color: #ffffff;">
+                <div class="mt-3">
+                    <div class="w-100 h-100 d-flex">
 
-
-                    <h4>Vehicle Details</h4>
-                    <div class="form-group">
-                        <div class="d-flex flex-row align-item-start mr-2 col-6">
-
-
-                            <div class="form-outline">
-                                <label class="form-label" for="typeNumber">Number of seats</label>
-                                <input type="number" id="typeNumber" class="form-control" placeholder="1" />
-
+                        <!-- car filter -->
+                        <div class="p-3"
+                            style="width:22%; margin-right:1%; height: 450px; border-radius: 20px; background-color: #ffffff;">
+                            <div class="p-3 w-100">
+                                <h3>Select Vehicle</h3>
+                                <div class="mt-5 d-flex flex-column align-item-start mr-2 col-12">
+                                    <div class="form-outline">
+                                        <label class="ms-2 text-gray" style="font-weight:500;">Number of
+                                            Seats</label>
+                                        <input type="number" id="typeNumber" class="form-control"
+                                            style="border-radius: 100px; width: 100%; height:40px;" placeholder="1" />
+                                    </div>
+                                    <div class="mt-3 form-outline">
+                                        <label class="ms-2 text-gray" style="font-weight:500;">Gas Milage
+                                            (optional)</label>
+                                        <input type="text" class="form-control" placeholder="combined city/highway"
+                                            style="border-radius: 100px; width: 100%; height:40px;">
+                                    </div>
+                                    <div class="mt-3 form-outline">
+                                        <label class="ms-2 text-gray" style="font-weight:500;">Vehicle Brand
+                                            (optional)</label>
+                                        <select class="form-control rounded-pill d-flex" id="vehicle-brand-selector"
+                                            name="vehicle-brand" style="height:40px; color: #6c757d;">
+                                            <option value="">--choose a vehicle brand--</option>
+                                            <option value="toyota">Toyota</option>
+                                            <option value="honda">Honda</option>
+                                            <option value="ford">Ford</option>
+                                            <option value="chevrolet">Chevrolet</option>
+                                            <option value="nissan">Nissan</option>
+                                            <option value="bmw">BMW</option>
+                                            <option value="mercedes-benz">Mercedes-Benz</option>
+                                        </select>
+                                    </div>
+                                    <div class="mt-3 form-outline">
+                                        <label class="ms-2 text-gray" style="font-weight:500;">Energy Type
+                                            (optional)</label>
+                                        <select class="form-control rounded-pill d-flex" id="vehicle-type-selector"
+                                            name="vehicle-type" style="height:40px; color: #6c757d;">
+                                            <option value="">--choose a Energy type--</option>
+                                            <option value="hybrid">Hybrid</option>
+                                            <option value="electric">Electric</option>
+                                            <option value="sports-car">Sports Car</option>
+                                        </select>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+
+                        <!-- car list -->
+
+                        <div class="car-list-container d-flex"
+                            style="border-radius: 20px;width: 75%;flex-grow: 1;overflow-x: auto;overflow-y: hidden;">
+                            <ul class="car-list d-flex"
+                                style="border-radius: 20px;white-space: nowrap;margin-left: -3%;height: 100%;">
+                                <!-- JavaScript will insert car cards here -->
+                            </ul>
+                        </div>
                     </div>
-                    <!-- TODO: forms: number of seats, brand preference, gas or electric, etc etc  -->
-                    <h5>Available Now</h5>
-                    <div class="col d-flex flex-row justify-content-between">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                            class="bi bi-arrow-left mt-5" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
-                        </svg>
-
-                        <div class="p-2 ms-1 rounded float-left" style="box-shadow: #b5b5b5 0px 0px 8px; width:
-                        22%">
-                            <img src="assets/car.png" alt="car" style=" width: 100%">
-                            <p class="fs-5 fw-bold  mb-1 mt-0 ">Car-Type</p>
-                            <p class=" fs-6 mb-0 mt-0 ">Gas Milage:</p>
-                            <p class=" mb-1 mt-0 ">License Plate #:</p>
-                            <i class="fa-solid fa-person"></i>
-                            <i class="fa-solid fa-person"></i>
-                            <i class="fa-solid fa-person"></i>
-                            <i class="fa-solid fa-person"></i>
-                        </div>
-                        <div class="p-2 ms-1 rounded float-left" style="box-shadow: #b5b5b5 0px 0px 8px; width:
-                        22%">
-                            <img src="assets/car.png" alt="car" style=" width: 100%">
-                            <p class="fs-5 fw-bold  mb-1 mt-0 ">Car-Type</p>
-                            <p class=" fs-6 mb-0 mt-0 ">Gas Milage:</p>
-                            <p class=" mb-1 mt-0 ">License Plate #:</p>
-                            <i class="fa-solid fa-person"></i>
-                            <i class="fa-solid fa-person"></i>
-                            <i class="fa-solid fa-person"></i>
-                            <i class="fa-solid fa-person"></i>
-                        </div>
-                        <div class="p-2 ms-1 rounded float-left" style="box-shadow: #b5b5b5 0px 0px 8px; width:
-                        22%">
-                            <img src="assets/car.png" alt="car" style=" width: 100%">
-                            <p class="fs-5 fw-bold  mb-1 mt-0 ">Car-Type</p>
-                            <p class=" fs-6 mb-0 mt-0 ">Gas Milage:</p>
-                            <p class=" mb-1 mt-0 ">License Plate #:</p>
-                            <i class="fa-solid fa-person"></i>
-                            <i class="fa-solid fa-person"></i>
-
-                        </div>
-                        <div class="p-2 ms-1 rounded float-left" style="box-shadow: #b5b5b5 0px 0px 8px; width:
-                        22%">
-                            <img src="assets/car.png" alt="car" style=" width: 100%">
-                            <p class="fs-5 fw-bold  mb-1 mt-0 ">Car-Type</p>
-                            <p class=" fs-6 mb-0 mt-0 ">Gas Milage:</p>
-                            <p class=" mb-1 mt-0 ">License Plate #:</p>
-                            <i class="fa-solid fa-person"></i>
-                            <i class="fa-solid fa-person"></i>
-                            <i class="fa-solid fa-person"></i>
-                            <i class="fa-solid fa-person"></i>
-                            <i class="fa-solid fa-person"></i>
-                            <i class="fa-solid fa-person"></i>
-                        </div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                            class="mt-5 bi bi-arrow-right" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-                        </svg>
-
-
-                    </div>
-
-                    <!-- TODo: list of available vehicles based on preferences -->
                 </div>
             </div>
-
-
-
         </div>
 
-        <!-- Detaisl------------------------------------------------ -->
-        <div class="row ">
+        <!-- Trip Summary------------------------------------------------ -->
+        <div class="mb-5 row">
             <!-- TODO: make a mock up of what a details page might look like after the client has entered as
                     much information as possible. A collected representation of the resercation Buttoms for 
                     sharing (email), printing, and saving 
                     Also cost expectancy
                  -->
-            <div class="col-12 ">
-                <div class="d-flex flex-row mt-3 p-3" style="background-color: #ffffff;">
-                    <div class="col-6">
-                        <h4>Details</h4> 
-                       
-                        
-
-                        <!-- Cutomer info summary ------------- -->
-                        <div class="col-11">
-                            <div class="col-12">
-                                <h5>Customer Information</h5>
-                                <hr class="m-0">
-                            </div>
-                            <div class="col-11 d-flex flex-rows">
-                                <div class="col-6">
-                                    <p class="m-0"> <b> Name:</b> John Doe</p>
-                                    <p class="m-0"> <b> DOB:</b> 1/1/1999</p>
-                                    <p class="m-0"> <b> Email:</b> johndoe@email.com</p>
-                                    <p class="m-0"> <b> Phone:</b> 123-456-7890</p>
+            <div class="col-12">
+                <div class="mt-3 p-3" style="border-radius: 20px; background-color: #ffffff;">
+                    <div class="p-3">
+                        <h3>Summary</h3>
+                        <div class="mt-5 row">
+                            <!-- Cutomer info summary ------------- -->
+                            <div class="col-6">
+                                <div class="col-11">
+                                    <div class="col-12">
+                                        <h5>Customer Information</h5>
+                                        <hr class="m-0">
+                                    </div>
+                                    <div class="col-11 d-flex flex-rows">
+                                        <div class="col-6">
+                                            <p class="m-0"> <b> Name:</b> John Doe</p>
+                                            <p class="m-0"> <b> DOB:</b> 1/1/1999</p>
+                                            <p class="m-0"> <b> Email:</b> johndoe@email.com</p>
+                                            <p class="m-0"> <b> Phone:</b> 123-456-7890</p>
+                                        </div>
+                                        <div class="col-6">
+                                            <p class="m-0"> <b> Driver license #:</b> A123456789</p>
+                                            <p class="m-0"> <b> User ID #:</b> 12-34-56789</p>
+                                            <p class="m-0"> <b> Confirmation #:</b> 56789</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-6">
-                                    <p class="m-0"> <b> Driver license #:</b> A123456789</p>
-                                    <p class="m-0"> <b> User ID #:</b> 12-34-56789</p>
-                                    <p class="m-0"> <b> Confirmation #:</b> 56789</p>
+                                <!-- vehicle info summary-------------------- -->
+                                <div class="col-11 mt-3">
+                                    <div class="col-12">
+                                        <h5>Vehicle Information</h5>
+                                        <hr class="m-0">
+                                    </div>
+                                    <div class="col-11 d-flex flex-rows">
+                                        <div class="col-6">
+                                            <p class="m-0"> <b> Make:</b> Nissan</p>
+                                            <p class="m-0"> <b> License plate #:</b> A12 3B4</p>
+                                            <p class="m-0"> <b> Seats:</b> 4</p>
+                                        </div>
+                                        <div class="col-6">
+                                            <p class="m-0"> <b> Model:</b> Altima</p>
+                                            <p class="m-0"> <b> Milage:</b> 12,345</p>
+                                            <p class="m-0"> <b> Insurence #:</b> 123-456-7890</p>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
 
-                        <!-- vehicle info summary-------------------- -->
-                        <div class="col-11 mt-3">
-                            <div class="col-12">
-                                <h5>Vehicle Information</h5>
-                                <hr class="m-0">
-                            </div>
-                            <div class="col-11 d-flex flex-rows">
-                                <div class="col-6">
-                                    <p class="m-0"> <b> Make:</b> Nissan</p>
-                                    <p class="m-0"> <b> License plate #:</b> A12 3B4</p>
-                                    <p class="m-0"> <b> Seats:</b> 4</p>
-
-
-
-                                </div>
-                                <div class="col-6">
-                                    <p class="m-0"> <b> Model:</b> Altima</p>
-                                    <p class="m-0"> <b> Milage:</b> 12,345</p>
-                                    <p class="m-0"> <b> Insurence #:</b> 123-456-7890</p>
-
-                                </div>
-                            </div>
-                        </div>
-
-                       
-
-                         <!-- cost breakdown summary-------------------- -->
-                         <div class="col-11 mt-3">
-                            <div class="col-12">
-                                <h5>Cost Estimate Summary</h5>
-                                <hr class="m-0">
-                            </div>
-                            <div class="col-12 d-flex flex-rows">
-                                <div class="col-12">
-                                    <ul class="m-0 p-0">
-                                        <li style="display: flex;"><b> Car Deposit:</b><span class="dots" style=" border-bottom: 1px dotted black;
+                                <!-- cost breakdown summary-------------------- -->
+                                <div class="col-11 mt-3">
+                                    <div class="col-12">
+                                        <h5>Cost Estimate Summary</h5>
+                                        <hr class="m-0">
+                                    </div>
+                                    <div class="col-12 d-flex flex-rows">
+                                        <div class="col-12">
+                                            <ul class="m-0 p-0">
+                                                <li style="display: flex;"><b> Car Deposit:</b><span class="dots" style=" border-bottom: 1px dotted black;
                                             flex: 1;"></span><span><b>$374</b></span>
-                                        </li>
-                                        <li style="display: flex;"><b> Rental fee per day:</b><span class="dots" style=" border-bottom: 1px dotted black;
+                                                </li>
+                                                <li style="display: flex;"><b> Rental fee per day:</b><span class="dots"
+                                                        style=" border-bottom: 1px dotted black;
                                             flex: 1;"></span><span>$100</span>
-                                        </li>
-                                        <li style="display: flex;">Days<span class="dots"  style=" border-bottom: 1px dotted black;
+                                                </li>
+                                                <li style="display: flex;">Days<span class="dots" style=" border-bottom: 1px dotted black;
                                             flex: 1;"></span><span>*7</span>
-                                        </li >
-                                        <li style="display: flex;"><b> Renting Fee Total:</b><span class="dots"  style=" border-bottom: 1px dotted black;
+                                                </li>
+                                                <li style="display: flex;"><b> Renting Fee Total:</b><span class="dots"
+                                                        style=" border-bottom: 1px dotted black;
                                             flex: 1;"></span><span><b>$700</b></span>
-                                        </li>
-                                        <li style="display: flex;"><b> Estimated Gas per Day:</b><span class="dots" style=" border-bottom: 1px dotted black;
+                                                </li>
+                                                <li style="display: flex;"><b> Estimated Gas per Day:</b><span
+                                                        class="dots" style=" border-bottom: 1px dotted black;
                                             flex: 1;"></span><span>$63</span>
-                                        </li>
-                                        <li style="display: flex;">Days<span class="dots"  style=" border-bottom: 1px dotted black;
+                                                </li>
+                                                <li style="display: flex;">Days<span class="dots" style=" border-bottom: 1px dotted black;
                                             flex: 1;"></span><span>*7</span>
-                                        </li >
-                                       
-                                        <li style="display: flex;"><b> Estimated Gas Total:</b><span class="dots"  style=" border-bottom: 1px dotted black;
+                                                </li>
+
+                                                <li style="display: flex;"><b> Estimated Gas Total:</b><span
+                                                        class="dots" style=" border-bottom: 1px dotted black;
                                             flex: 1;"></span><span><b>$441</b></span>
-                                        </li>
-                                      </ul>
+                                                </li>
+                                            </ul>
 
-                                      <hr class="mt-4 mb-2">
+                                            <hr class="mt-4 mb-2">
 
-                                      <ul class="m-0 p-0">
-                                        <li style="display: flex;">Subtotal:<span class="dots" style=" border-bottom: 1px dotted black;
+                                            <ul class="m-0 p-0">
+                                                <li style="display: flex;">Subtotal:<span class="dots" style=" border-bottom: 1px dotted black;
                                             flex: 1;"></span><span>$374</span>
-                                        </li>
-                                        <li style="display: flex;">Tax:<span class="dots" style=" border-bottom: 1px dotted black;
+                                                </li>
+                                                <li style="display: flex;">Tax:<span class="dots" style=" border-bottom: 1px dotted black;
                                             flex: 1;"></span><span>$374</span>
-                                        </li>
-                                        <li style="display: flex;"><b>Total:</b><span class="dots" style=" border-bottom: 1px dotted black;
+                                                </li>
+                                                <li style="display: flex;"><b>Total:</b><span class="dots" style=" border-bottom: 1px dotted black;
                                             flex: 1;"></span><span><b>$374</b></span>
-                                        </li>
-                                    </ul>
-
-
-
-
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
-                                
+
+                                <div class="mt-3">
+                                    <i class="fa-solid fa-print" style="font-size: 25px;"></i>
+                                    <i class="fa-solid fa-envelope ms-2" style="font-size: 25px;"></i>
+                                </div>
+                            </div>
+
+                            <!-- trip info summary-------------------- -->
+                            <div class="col-6">
+                                <div class="col-11 ">
+                                    <div class="col-12">
+                                        <h5>Route Information</h5>
+                                        <hr class="m-0">
+                                    </div>
+                                    <div class="col-11 d-flex flex-rows">
+                                        <div class="col-6">
+                                            <p class="m-0"> <b> Pick-Up:</b> 1/12/23</p>
+                                            <p class="m-0"> <b> Stops:</b> 4</p>
+                                        </div>
+                                        <div class="col-6">
+                                            <p class="m-0"> <b> Drop-Off:</b> 1/19/23</p>
+                                            <p class="m-0"> <b> Estimated Distance:</b> 123-456-7890</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m58!1m12!1m3!1d456857.94678149617!2d-91.01067722802483!3d38.30745579443429!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m43!3e1!4m5!1s0x87d8caa963c50cdf%3A0x5a6089ec9e560c58!2sSam%20Fox%20School%20of%20Design%20and%20Visual%20Arts%2C%20Brookings%20Drive%2C%20St.%20Louis%2C%20MO!3m2!1d38.6458857!2d-90.3031422!4m5!1s0x87dae654c3139c31%3A0xb48346fe60abadc4!2sUranus%20Fudge%20Factory%20And%20General%20Store%2C%2014400%20State%20Hwy%20Z%2C%20St%20Robert%2C%20MO%2065584!3m2!1d37.8287218!2d-92.1053864!4m5!1s0x87d94e8133c753d7%3A0xdd2507b5317e2ed5!2sWashington!3m2!1d38.558107199999995!2d-91.01208779999999!4m5!1s0x87dbb17645e4f8c1%3A0x244a2e6e693960da!2sSewell%20Cemetery%2C%20St%20James%2C%20MO%2065559!3m2!1d38.0658567!2d-91.6358497!4m5!1s0x87da577c68ac6af3%3A0xd9b9e078b425841f!2sHaven%20Hollow%20RV%20Park%2C%2017782%20Co%20Rd%205310%2C%20Rolla%2C%20MO%2065401!3m2!1d37.8386134!2d-91.77388479999999!4m5!1s0x87db781a794327b9%3A0x8f51c9894544abf2!2sLinn%2C%20MO%2065051!3m2!1d38.4858749!2d-91.85045149999999!4m5!1s0x87da4011b07d9695%3A0x9f48814ab4439a44!2sSalem%2C%20MO%2065560!3m2!1d37.6455993!2d-91.53598079999999!5e0!3m2!1sen!2sus!4v1679530807578!5m2!1sen!2sus"
+                                    width="600" height="450" class="mt-3" style="border-radius: 10px; border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade">
+                                </iframe>
+
+                                <!-- Create reservation button  -->
+                                <div class="mt-3 d-flex justify-content-end align-items-end" style="width:600px;">
+                                    <button type="submit" class="px-3 btn btn-secondary mt-1"
+                                    style="border-radius: 100px; color: white; background-color: #1472ff; border: #1472ff 1px solid;">
+                                    Create Trip
+                                    </button>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="mt-3">
-                            <i class="fa-solid fa-print" style="font-size: 25px;"></i>
-                            <i class="fa-solid fa-envelope ms-2" style="font-size: 25px;"></i>
-                         </div>
-
-
-                      
                     </div>
-
-                    <div class="col-6">
-                         <!-- trip info summary-------------------- -->
-                         <div class="col-11 ">
-                            <div class="col-12">
-                                <h5>Route Information</h5>
-                                <hr class="m-0">
-                            </div>
-                            <div class="col-11 d-flex flex-rows">
-                                <div class="col-6">
-                                    
-                                    <p class="m-0"> <b> Pick-Up:</b> 1/12/23</p>
-                                   
-                                    <p class="m-0"> <b> Stops:</b> 4</p>
-
-
-
-                                </div>
-                                <div class="col-6">
-                                 
-                                    <p class="m-0"> <b> Drop-Off:</b> 1/19/23</p>
-                                    <p class="m-0"> <b> Estimated Distance:</b> 123-456-7890</p>
-
-                                </div>
-                            </div>
-                        </div>
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m58!1m12!1m3!1d456857.94678149617!2d-91.01067722802483!3d38.30745579443429!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m43!3e1!4m5!1s0x87d8caa963c50cdf%3A0x5a6089ec9e560c58!2sSam%20Fox%20School%20of%20Design%20and%20Visual%20Arts%2C%20Brookings%20Drive%2C%20St.%20Louis%2C%20MO!3m2!1d38.6458857!2d-90.3031422!4m5!1s0x87dae654c3139c31%3A0xb48346fe60abadc4!2sUranus%20Fudge%20Factory%20And%20General%20Store%2C%2014400%20State%20Hwy%20Z%2C%20St%20Robert%2C%20MO%2065584!3m2!1d37.8287218!2d-92.1053864!4m5!1s0x87d94e8133c753d7%3A0xdd2507b5317e2ed5!2sWashington!3m2!1d38.558107199999995!2d-91.01208779999999!4m5!1s0x87dbb17645e4f8c1%3A0x244a2e6e693960da!2sSewell%20Cemetery%2C%20St%20James%2C%20MO%2065559!3m2!1d38.0658567!2d-91.6358497!4m5!1s0x87da577c68ac6af3%3A0xd9b9e078b425841f!2sHaven%20Hollow%20RV%20Park%2C%2017782%20Co%20Rd%205310%2C%20Rolla%2C%20MO%2065401!3m2!1d37.8386134!2d-91.77388479999999!4m5!1s0x87db781a794327b9%3A0x8f51c9894544abf2!2sLinn%2C%20MO%2065051!3m2!1d38.4858749!2d-91.85045149999999!4m5!1s0x87da4011b07d9695%3A0x9f48814ab4439a44!2sSalem%2C%20MO%2065560!3m2!1d37.6455993!2d-91.53598079999999!5e0!3m2!1sen!2sus!4v1679530807578!5m2!1sen!2sus"
-                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-
                 </div>
-                <div class="d-flex flex-column align-items-end">
-                    <button type="submit" class="btn btn-secondary mt-3"
-                        style="background-color: #1472ff;">Create</button>
-                </div>
-
-                <!-- Create reservation button  -->
-
-
             </div>
         </div>
     </div>
-    <footer class="bg-light text-center text-lg-start">
+
+    <footer class="bg-light text-center text-lg-start d-flex justify-content-center align-items-center"
+        style="height: 3vh; background: #f1f3f4;">
         <!-- Copyright -->
-        <div class="text-center p-3 mt-5" style="background-color: rgba(0, 0, 0, 0.2);">
+        <div class="text-secondary text-center p-3 col-12" style="background: #f1f3f4;">
             © 2023 Copyright:
-            <a class="text-dark" href="">Paige and Jeffrey</a>
+            <a class="text-secondary" href="">Paige and Jeffrey</a>
         </div>
-        <!-- Copyright -->
     </footer>
 </body>
 
 <script src="script.js"></script>
+<script src="./javascript/script.js"></script>
+<script src="./javascript/tripCards.js"></script>
+<script src="./javascript/carCards.js"></script>
+<script src="./javascript/creditCardFormat.js"></script>
+<script src="./javascript/searchTripToggle.js"></script>
+<script src="./javascript/createTripHover.js"></script>
 
 </html>

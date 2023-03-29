@@ -161,3 +161,10 @@
     border-bottom: 10px solid transparent;
     border-right: 10px solid #ccc;
 }
+
+#addTrip {
+    color:#333;
+}
+#addTrip:hover {
+    color: #888;
+}

@@ -1,4 +1,4 @@
-const lookUpTripLink = document.querySelector('.nav-link');
+const lookUpTripLink = document.querySelector('#lookup');
 const searchButton = document.querySelector('.btn-secondary');
 
 lookUpTripLink.addEventListener('mouseover', () => {

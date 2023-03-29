@@ -30,15 +30,15 @@
         cardTitle.className = 'card-title mb-3';
         cardTitle.textContent = 'Steve Laboni';
 
-        const cardPhone = document.createElement('h6');
+        const cardPhone = document.createElement('p');
         cardPhone.className = 'card-subtitle mb-2 text-muted';
         cardPhone.textContent = 'phone# : (123)-456-7890';
 
-        const cardDepartureDate = document.createElement('h6');
+        const cardDepartureDate = document.createElement('p');
         cardDepartureDate.className = 'card-subtitle mb-2 text-muted';
         cardDepartureDate.textContent = 'Depature date: 12/31/2023';
 
-        const cardVehicleType = document.createElement('h6');
+        const cardVehicleType = document.createElement('p');
         cardVehicleType.className = 'card-subtitle mb-2 text-muted';
         cardVehicleType.textContent = 'Vehicle type: Honda SUV';
 
